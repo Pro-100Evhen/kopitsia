@@ -4,7 +4,6 @@ import Header from "./Layout/Header";
 function App() {
    return (
       <>
-         {/* <Head title="Welcome" /> */}
          {/* <div classNameName="sm:fixed sm:top-0 sm:right-0 p-6 text-end">
                   {auth.user ? (
                       <Link

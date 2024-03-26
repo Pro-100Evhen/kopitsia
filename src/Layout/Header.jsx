@@ -1,5 +1,4 @@
 import React from "react";
-// import { Link, Head } from "@inertiajs/react";
 
 import "../assets/css/demo2.css";
 import "../assets/css/demo4.css";
@@ -15,7 +14,7 @@ import "../assets/css/vendors/ion.rangeSlider.min.css";
 import "../assets/css/vendors/slick/slick-theme.css";
 import "../assets/css/vendors/slick/slick.css";
 
-import "../assets/css/main.scss"
+import "../assets/css/main.scss";
 const Header = () => {
    return (
       <header className="header-style-2" id="home">
@@ -103,7 +102,6 @@ const Header = () => {
                               </div>
                            </div>
                         </nav>
-
 
                         <div className="menu-right">
                            <ul>
