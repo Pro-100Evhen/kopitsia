@@ -1,22 +1,4 @@
 import React from "react";
-// import "../assets/js/jquery-3.5.1.min";
-
-// import "../assets/js/bootstrap/bootstrap.bundle.min.js";
-// import "../assets/js/feather/feather.min.js";
-// import "../assets/js/cart_modal_resize.js";
-
-// import "../assets/js/lazysizes.min.js";
-// import "../assets/js/slick/slick.js";
-// import "../assets/js/slick/slick-animation.min.js";
-// import "../assets/js/slick/custom_slick.js";
-// import "../assets/js/price-filter.js";
-// import "../assets/js/ion.rangeSlider.min.js";
-
-// import "../assets/js/filter.js";
-// import "../assets/js/newsletter.js";
-// import "../assets/js/bootstrap/bootstrap-notify.min.js";
-// import "../assets/js/theme-setting.js";
-// import "../assets/js/script.js";
 
 const Footer = () => {
    return (

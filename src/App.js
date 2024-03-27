@@ -35,11 +35,11 @@ function App() {
          {/* Картка купити, коли тикаєш на купити */}
          <CartBuyProduct />
 
-         <div className="tap-to-top">
+         {/* <div className="tap-to-top">
             <a href="#home">
                <i className="fas fa-chevron-up"></i>
             </a>
-         </div>
+         </div> */}
 
          <div className="bg-overlay"></div>
       </>
