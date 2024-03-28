@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../assets/css/demo2.css";
+// import "../assets/css/demo2.css";
 import "../assets/css/demo4.css";
 
 import "../assets/css/custom.css";

@@ -2230,8 +2230,9 @@ span {
       background-color: var(--theme-color); }
 
 .image-show .slick-list {
-  overflow: visible;
-  height: auto !important; }
+  /* overflow: visible; */
+  /* height: auto !important; */
+ }
 
 .image-show .slick-slide {
   float: none; }
@@ -4263,7 +4264,8 @@ header .main-navbar {
       .poster-section .slider-nav {
         right: 50px; } }
     .poster-section .slider-nav div + div {
-      margin-top: 20px; }
+      /* margin-top: 20px;  */
+    }
       @media (max-width: 1199px) {
         .poster-section .slider-nav div + div {
           margin-top: 8px; } }

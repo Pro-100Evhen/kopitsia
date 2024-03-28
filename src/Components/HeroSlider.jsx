@@ -1,9 +1,71 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
+import Slider from "react-slick";
+
+function HeroSliderNextArrow(props) {
+   const { onClick } = props;
+   return (
+      <div onClick={onClick} className="custom-arrow next">
+         <span>Next</span>
+         <i class="fas fa-chevron-right ms-3"></i>
+      </div>
+   );
+}
+
+function HeroSliderPrevArrow(props) {
+   const { onClick } = props;
+   return (
+      <div onClick={onClick} className="custom-arrow prev">
+         <i class="fas fa-chevron-left me-3"></i>
+         <span>Prev</span>
+      </div>
+   );
+}
 
 const HeroSlider = () => {
+   var sliderFor = {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      fade: true,
+      // asNavFor: ".slider-nav",
+      nextArrow: <HeroSliderNextArrow />,
+      prevArrow: <HeroSliderPrevArrow />,
+   };
+   var sliderNav = {
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      verticalSwiping: true,
+      infinite: true,
+      // asNavFor: ".slider-for",
+      // dots: true,
+      focusOnSelect: true,
+      vertical: true,
+   };
+   const [nav1, setNav1] = useState(null);
+   const [nav2, setNav2] = useState(null);
+   let sliderRef1 = useRef(null);
+   let sliderRef2 = useRef(null);
+
+   useEffect(() => {
+      setNav1(sliderRef1);
+      setNav2(sliderRef2);
+   }, []);
+
    return (
       <section className="pt-0 poster-section">
-         <div className="poster-image slider-for custome-arrow classNameic-arrow">
+         <Slider
+            asNavFor={nav2}
+            ref={(slider) => (sliderRef1 = slider)}
+            {...sliderFor}
+            className="poster-image slider-for custome-arrow classNameic-arrow"
+         >
+            <div>
+               <img
+                  src="assets/images/furniture-images/poster/1.png"
+                  className="img-fluid blur-up lazyload"
+                  alt="main-full-1"
+               />
+            </div>
             <div>
                <img
                   src="assets/images/furniture-images/poster/1.png"
@@ -25,8 +87,26 @@ const HeroSlider = () => {
                   alt="main-full-3"
                />
             </div>
-         </div>
-         <div className="slider-nav image-show">
+         </Slider>
+
+         <Slider
+            asNavFor={nav1}
+            ref={(slider) => (sliderRef2 = slider)}
+            {...sliderNav}
+            className="slider-nav image-show"
+         >
+            <div>
+               <div className="poster-img">
+                  <img
+                     src="assets/images/furniture-images/poster/t2.jpg"
+                     className="img-fluid blur-up lazyload"
+                     alt=""
+                  />
+                  <div className="overlay-color">
+                     <i className="fas fa-plus theme-color"></i>
+                  </div>
+               </div>
+            </div>
             <div>
                <div className="poster-img">
                   <img
@@ -63,7 +143,7 @@ const HeroSlider = () => {
                   </div>
                </div>
             </div>
-         </div>
+         </Slider>
 
          <div className="left-side-contain">
             <div className="banner-left">
