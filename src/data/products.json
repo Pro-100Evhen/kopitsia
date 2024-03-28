@@ -1,0 +1,186 @@
+[
+   {
+      "id": "21505-1",
+      "sizes": ["18", "22", "52", "70"],
+      "name": "М'яка іграшка Товстунчик Міша, 70 см.",
+      "imageUrl": "https://toys-kopitsa.com.ua/image/cache/ba2941ce904f9d8cedc699adecb0189d.png",
+      "price": "1 125 грн.",
+      "categories": "плюшеві ведмеді"
+   },
+   {
+      "id": "21505-2",
+      "sizes": ["18", "22", "52", "70"],
+      "name": "М'яка іграшка Товстунчик Панда, 55 см.",
+      "imageUrl": "https://toys-kopitsa.com.ua/image/cache/aafb6c881cf701bdc14b8b82f0d6c910.png",
+      "price": "675 грн.",
+      "categories": "плюшеві ведмеді"
+   },
+   {
+      "id": "21505-3",
+      "sizes": ["18", "22", "52", "70"],
+      "name": "М'яка іграшка Товстунчик Панда, 70 см.",
+      "imageUrl": "https://toys-kopitsa.com.ua/image/cache/efa3d9f90b8ec9b9db0242470b1a3ce3.png",
+      "price": "1 125 грн.",
+      "categories": "плюшеві ведмеді"
+   },
+   {
+      "id": "00716-20",
+      "sizes": ["18", "22", "52", "70"],
+      "name": "Ведмедик Антошка, 38 см.(музичний)",
+      "imageUrl": "https://toys-kopitsa.com.ua/image/cache/bcf4fdcf05a111dc80cf0d098c6c8351.png",
+      "price": "728 грн.",
+      "categories": "плюшеві ведмеді"
+   },
+   {
+      "id": "21076",
+      "name": "Ведмедик Боня, 50 см.",
+      "sizes": ["18", "22", "52", "70"],
+      "imageUrl": "https://toys-kopitsa.com.ua/image/cache/8e51fba619037285719e47204e64c147.png",
+      "price": "1 050 грн.",
+      "categories": "плюшеві ведмеді"
+   },
+   {
+      "id": "21003-011",
+      "sizes": ["18", "22", "52", "70"],
+      "name": "Ведмедик Бублик (капучіно), 60 см. (музичний)",
+      "imageUrl": "https://toys-kopitsa.com.ua/image/cache/b277b3cb24834b51796d2365fc75aec7.png",
+      "price": "728 грн.",
+      "categories": "плюшеві ведмеді"
+   },
+   {
+      "id": "21004",
+      "sizes": ["18", "22", "52", "70"],
+      "name": "Ведмедик Бублик (капучино), 90 см.",
+      "imageUrl": "https://toys-kopitsa.com.ua/image/cache/2c763206708144caa7c50cf55ee9cc36.png",
+      "price": "1 350 грн.",
+      "categories": "плюшеві ведмеді"
+   },
+   {
+      "id": "21003-010",
+      "sizes": ["18", "22", "52", "70"],
+      "name": "Ведмедик Бублик (коричневий), 60 см.(музичний)",
+      "imageUrl": "https://toys-kopitsa.com.ua/image/cache/4c813d5daa4bafaf5f3e5cdf7cc79f39.png",
+      "price": "728 грн.",
+      "categories": "плюшеві ведмеді"
+   },
+   {
+      "id": "00002-02",
+      "sizes": ["18", "22", "52", "70"],
+      "name": "Ведмедик Бублик (пудра), 120 см.",
+      "imageUrl": "https://toys-kopitsa.com.ua/image/cache/13bee54bf601d73978459871654dde38.png",
+      "price": "2 400 грн.",
+      "categories": "плюшеві ведмеді"
+   },
+   {
+      "id": "00583",
+      "sizes": ["18", "22", "52", "70"],
+      "name": "Сувенір Сніговик",
+      "imageUrl": "https://toys-kopitsa.com.ua/image/cache/f289fb0fb00537b742c0d0034be5b116.png",
+      "price": "278 грн.",
+      "categories": "сувенір"
+   },
+   {
+      "id": "00971-8",
+      "sizes": ["18", "22", "52", "70"],
+      "name": "Сувенір танк Леопард, 42 см.",
+      "imageUrl": "https://toys-kopitsa.com.ua/image/cache/614f3323deae5fb312d31206a7ee94da.png",
+      "price": "375 грн.",
+      "categories": "сувенір"
+   },
+   {
+      "id": "00970-56",
+      "sizes": ["18", "22", "52", "70"],
+      "name": "Сувенір Хаймарс, 38см.",
+      "imageUrl": "https://toys-kopitsa.com.ua/image/cache/ff94734960e7162ff71d6b3a76daf858.png",
+      "price": "270 грн.",
+      "categories": "сувенір"
+   },
+   {
+      "id": "00970-57",
+      "sizes": ["18", "22", "52", "70"],
+      "name": "Сувенір Хаймарс, 39см.",
+      "imageUrl": "https://toys-kopitsa.com.ua/image/cache/5942bd872b5358afd89788ce357edf63.png",
+      "price": "345 грн.",
+      "categories": "сувенір"
+   },
+   {
+      "id": "00275-6",
+      "sizes": ["18", "22", "52", "70"],
+      "name": "Обіймашка Морква, 90 см.",
+      "imageUrl": "https://toys-kopitsa.com.ua/image/cache/a6e7f707e5cbd85842f1e34d65481a68.png",
+      "price": "728 грн.",
+      "categories": "крісла_подушки"
+   },
+   {
+      "id": "00290-91",
+      "sizes": ["18", "22", "52", "70"],
+      "name": "Подушка фрукт Гранат, 27 см",
+      "imageUrl": "https://toys-kopitsa.com.ua/image/cache/e4856ec1f296b69c8bdc8680351ed5a5.png",
+      "price": "338 грн.",
+      "categories": "крісла_подушки"
+   },
+   {
+      "id": "00970-55",
+      "sizes": ["18", "22", "52", "70"],
+      "name": "Мрія сувенір , 38 см.",
+      "imageUrl": "https://toys-kopitsa.com.ua/image/cache/428bdca9d02b7cf82276d08bb434d5f0.png",
+      "price": "270 грн.",
+      "categories": "все_буде_україна"
+   },
+   {
+      "id": "25069",
+      "sizes": ["18", "22", "52", "70"],
+      "name": "М'яка іграшка Риба Клоун, 25 см",
+      "price": "150 грн.",
+      "imageUrl": "https://toys-kopitsa.com.ua/image/cache/d17140f517f3c9bc7578e1bec189ead7.png",
+      "categories": "М'які іграшки"
+   },
+   {
+      "id": "21524-6",
+      "sizes": ["18", "22", "52", "70"],
+      "name": "М'яка іграшка Дельфін Зоо, 24 см.",
+      "price": "225 грн.",
+      "imageUrl": "https://toys-kopitsa.com.ua/image/cache/4bf124e45404ce66bda522de1663eda5.png",
+      "categories": "М'які іграшки"
+   },
+   {
+      "id": "25007",
+      "sizes": ["18", "22", "52", "70"],
+      "name": "М'яка іграшка Дельфін Лаккі 3, 100 см.",
+      "price": "825 грн.",
+      "imageUrl": "https://toys-kopitsa.com.ua/image/cache/3b6a48417b06240619bfaabac3e32c3a.png",
+      "categories": "М'які іграшки"
+   },
+   {
+      "id": "21524-5",
+      "sizes": ["18", "22", "52", "70"],
+      "name": "М'яка іграшка Дельфін Сьома, 25 см.",
+      "price": "300 грн.",
+      "imageUrl": "https://toys-kopitsa.com.ua/image/cache/132da931b5e44070d37fe5d94e0e530b.png",
+      "categories": "М'які іграшки"
+   },
+   {
+      "id": "25011",
+      "sizes": ["18", "22", "52", "70"],
+      "name": "М'яка іграшка Дельфін, 24 см.",
+      "price": "300 грн.",
+      "imageUrl": "https://toys-kopitsa.com.ua/image/cache/dfb0fd3fe3e582a6f8f1cf371993087b.png",
+      "categories": "М'які іграшки"
+   },
+   {
+      "id": "21501",
+      "sizes": ["18", "22", "52", "70"],
+      "name": "М'яка іграшка Обіймашка Крокодил 1, 100 см.",
+      "price": "900 грн.",
+      "imageUrl": "https://toys-kopitsa.com.ua/image/cache/899bd811f14b59524aa5019767f6c4fc.png",
+      "categories": "М'які іграшки"
+   },
+   {
+      "id": "00594-5",
+      "sizes": ["18", "22", "52", "70"],
+      "name": "Подушка Акула синя, 25см.",
+      "price": "420 грн.",
+      "imageUrl": "https://toys-kopitsa.com.ua/image/cache/9da0a7d0f59245e016ec9aa85c532b8a.png",
+      "categories": "Подушки"
+   }
+]

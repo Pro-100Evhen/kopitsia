@@ -15,7 +15,8 @@ function App() {
 
          <HeroSlider />
 
-         <Baners />
+         {/* Банери категорій продуктів, створяться після підключення redux */}
+         {/* <Baners /> */}
 
          <ProductsCollection />
 

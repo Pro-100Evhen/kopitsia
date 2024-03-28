@@ -169,7 +169,7 @@ const HeroSlider = () => {
             </div>
          </div>
 
-         <div className="right-side-contain">
+         {/* <div className="right-side-contain">
             <div className="social-image">
                <h6>Facebook</h6>
             </div>
@@ -181,7 +181,7 @@ const HeroSlider = () => {
             <div className="social-image">
                <h6>Twitter</h6>
             </div>
-         </div>
+         </div> */}
       </section>
    );
 };
