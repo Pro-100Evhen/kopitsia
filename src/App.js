@@ -31,7 +31,7 @@ function App() {
 
          <div id="qvmodal"></div>
 
-         <Footer></Footer>
+         <Footer />
 
          {/* Картка купити, коли тикаєш на купити */}
          <CartBuyProduct />

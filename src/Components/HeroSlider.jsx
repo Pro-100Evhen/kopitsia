@@ -6,7 +6,7 @@ function HeroSliderNextArrow(props) {
    return (
       <div onClick={onClick} className="custom-arrow next">
          <span>Next</span>
-         <i class="fas fa-chevron-right ms-3"></i>
+         <i className="fas fa-chevron-right ms-3"></i>
       </div>
    );
 }
@@ -15,7 +15,7 @@ function HeroSliderPrevArrow(props) {
    const { onClick } = props;
    return (
       <div onClick={onClick} className="custom-arrow prev">
-         <i class="fas fa-chevron-left me-3"></i>
+         <i className="fas fa-chevron-left me-3"></i>
          <span>Prev</span>
       </div>
    );
@@ -61,30 +61,37 @@ const HeroSlider = () => {
          >
             <div>
                <img
-                  src="assets/images/furniture-images/poster/1.png"
+                  src="assets/images/HeroSlider/heroSlide1.png"
                   className="img-fluid blur-up lazyload"
                   alt="main-full-1"
                />
             </div>
             <div>
                <img
-                  src="assets/images/furniture-images/poster/1.png"
-                  className="img-fluid blur-up lazyload"
-                  alt="main-full-1"
-               />
-            </div>
-            <div>
-               <img
-                  src="assets/images/furniture-images/poster/2.png"
+                  src="assets/images/HeroSlider/heroSlide2.png"
                   className="img-fluid blur-up lazyload"
                   alt="main-full-2"
                />
             </div>
             <div>
                <img
-                  src="assets/images/furniture-images/poster/3.png"
+                  src="assets/images/HeroSlider/heroSlide3.png"
                   className="img-fluid blur-up lazyload"
                   alt="main-full-3"
+               />
+            </div>
+            <div>
+               <img
+                  src="assets/images/HeroSlider/heroSlide4.png"
+                  className="img-fluid blur-up lazyload"
+                  alt="main-full-4"
+               />
+            </div>
+            <div>
+               <img
+                  src="assets/images/HeroSlider/heroSlide5.png"
+                  className="img-fluid blur-up lazyload"
+                  alt="main-full-5"
                />
             </div>
          </Slider>
@@ -98,7 +105,7 @@ const HeroSlider = () => {
             <div>
                <div className="poster-img">
                   <img
-                     src="assets/images/furniture-images/poster/t2.jpg"
+                     src="assets/images/HeroSlider/heroSlide1.png"
                      className="img-fluid blur-up lazyload"
                      alt=""
                   />
@@ -110,7 +117,7 @@ const HeroSlider = () => {
             <div>
                <div className="poster-img">
                   <img
-                     src="assets/images/furniture-images/poster/t2.jpg"
+                     src="assets/images/HeroSlider/heroSlide2.png"
                      className="img-fluid blur-up lazyload"
                      alt=""
                   />
@@ -122,7 +129,7 @@ const HeroSlider = () => {
             <div>
                <div className="poster-img">
                   <img
-                     src="assets/images/furniture-images/poster/t1.jpg"
+                     src="assets/images/HeroSlider/heroSlide3.png"
                      className="img-fluid blur-up lazyload"
                      alt=""
                   />
@@ -134,7 +141,19 @@ const HeroSlider = () => {
             <div>
                <div className="poster-img">
                   <img
-                     src="assets/images/furniture-images/poster/t3.jpg"
+                     src="assets/images/HeroSlider/heroSlide4.png"
+                     className="img-fluid blur-up lazyload"
+                     alt=""
+                  />
+                  <div className="overlay-color">
+                     <i className="fas fa-plus theme-color"></i>
+                  </div>
+               </div>
+            </div>
+            <div>
+               <div className="poster-img">
+                  <img
+                     src="assets/images/HeroSlider/heroSlide5.png"
                      className="img-fluid blur-up lazyload"
                      alt=""
                   />

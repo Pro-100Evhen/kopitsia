@@ -5,7 +5,7 @@ const CartBuyProduct = () => {
       <div
          className="modal fade cart-modal"
          id="addtocart"
-         tabindex="-1"
+         tabIndex="-1"
          role="dialog"
          aria-label="myModalLabel"
          aria-hidden="true"

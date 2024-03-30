@@ -106,7 +106,8 @@ const Header = () => {
 
                            <div className="menu-right">
                               <ul>
-                                 <li>
+                                 {/* Пошук, дороблю в наступних спрінтах */}
+                                 {/* <li>
                                     <div className="search-box theme-bg-color">
                                        <svg
                                           xmlns="http://www.w3.org/2000/svg"
@@ -115,10 +116,10 @@ const Header = () => {
                                           viewBox="0 0 24 24"
                                           fill="none"
                                           stroke="currentColor"
-                                          stroke-width="2"
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
-                                          class="feather feather-search"
+                                          strokeWidth="2"
+                                          strokeLinecap="round"
+                                          strokeLinejoin="round"
+                                          className="feather feather-search"
                                        >
                                           <circle
                                              cx="11"
@@ -133,7 +134,7 @@ const Header = () => {
                                           ></line>
                                        </svg>
                                     </div>
-                                 </li>
+                                 </li> */}
                                  <li className="onhover-dropdown wislist-dropdown">
                                     <div className="cart-media">
                                        <a href="wishlist/list.html">
@@ -144,10 +145,10 @@ const Header = () => {
                                              viewBox="0 0 24 24"
                                              fill="none"
                                              stroke="currentColor"
-                                             stroke-width="2"
-                                             stroke-linecap="round"
-                                             stroke-linejoin="round"
-                                             class="feather feather-heart"
+                                             strokeWidth="2"
+                                             strokeLinecap="round"
+                                             strokeLinejoin="round"
+                                             className="feather feather-heart"
                                           >
                                              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                                           </svg>
@@ -170,10 +171,10 @@ const Header = () => {
                                              viewBox="0 0 24 24"
                                              fill="none"
                                              stroke="currentColor"
-                                             stroke-width="2"
-                                             stroke-linecap="round"
-                                             stroke-linejoin="round"
-                                             class="feather feather-shopping-cart"
+                                             strokeWidth="2"
+                                             strokeLinecap="round"
+                                             strokeLinejoin="round"
+                                             className="feather feather-shopping-cart"
                                           >
                                              <circle
                                                 cx="9"
@@ -212,10 +213,10 @@ const Header = () => {
                                                 viewBox="0 0 24 24"
                                                 fill="none"
                                                 stroke="currentColor"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                class="feather feather-user"
+                                                strokeWidth="2"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                className="feather feather-user"
                                              >
                                                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                                                 <circle
@@ -368,10 +369,10 @@ const Header = () => {
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="feather feather-heart"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="feather feather-heart"
                      >
                         <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                      </svg>
