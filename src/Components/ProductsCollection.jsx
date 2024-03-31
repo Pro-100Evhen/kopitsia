@@ -1,11 +1,17 @@
-import React from "react";
-import { selectorProducts } from "../redux/slices/ProductSlice";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { fetchProducts, selectorProducts } from "../redux/slices/ProductSlice";
+import { useDispatch, useSelector } from "react-redux";
 import ProductsPrev from "./products/ProductsPrev";
 
 const ProductsCollection = () => {
    const productsSelector = useSelector(selectorProducts);
    const products = productsSelector.products;
+
+   const dispatch = useDispatch();
+
+   useEffect(() => {
+      dispatch(fetchProducts());
+   }, [dispatch]);
 
    return (
       <section className="ratio_asos overflow-hidden">

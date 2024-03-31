@@ -51,7 +51,7 @@ const ProductGorizontalPrev = (props) => {
                            </a>
                         </li>
 
-                        <li
+                        {/* <li
                            data-bs-toggle="tooltip"
                            data-bs-placement="top"
                            title="Quick View"
@@ -77,7 +77,7 @@ const ProductGorizontalPrev = (props) => {
                                  <circle cx="12" cy="12" r="3"></circle>
                               </svg>
                            </a>
-                        </li>
+                        </li> */}
 
                         <li
                            data-bs-toggle="tooltip"
