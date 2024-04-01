@@ -9,7 +9,9 @@ const ProductsCollection = () => {
 
    const dispatch = useDispatch();
 
-   dispatch(fetchProducts());
+   useEffect(() => {
+      dispatch(fetchProducts());
+   }, [dispatch]);
 
    return (
       <section className="ratio_asos overflow-hidden">

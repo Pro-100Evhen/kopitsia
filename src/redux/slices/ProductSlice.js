@@ -3,6 +3,7 @@ import axios from "axios";
 
 const initialState = {
    products: [],
+   errorMsg: "",
    isLoading: false,
 };
 
@@ -33,6 +34,9 @@ const ProductSlice = createSlice({
    extraReducers: (builder) => {
       builder.addCase(fetchProducts.fulfilled, (state, action) => {
          state.products = action.payload;
+      });
+      builder.addCase(fetchProducts.rejected, (state, action) => {
+         state.errorMsg = action.error.message;
       });
    },
 });
