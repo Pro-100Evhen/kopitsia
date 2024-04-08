@@ -120,3 +120,40 @@ header .profile-dropdown ul {
 .slider-nav .slick-list .slick-slide {
    max-width: 200px;
 }
+.notFound {
+   &__conteiner {
+      min-width: 100%;
+      // min-height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 30px;
+   }
+
+   &__error {
+   }
+
+   &__title {
+   }
+
+   &__text {
+   }
+
+   &__link {
+      text-decoration: none;
+      cursor: pointer;
+      color: #fff;
+      background-color: #0163d2;
+      padding: 20px 40px;
+      border-radius: 20px;
+      display: inline-block;
+      border: 1px solid #fff;
+      width: auto;
+      transition: all 0.3s ease 0s;
+      &:hover {
+         background-color: #fff;
+         color: #0163d2;
+         border: 1px solid #0163d2;
+      }
+   }
+}

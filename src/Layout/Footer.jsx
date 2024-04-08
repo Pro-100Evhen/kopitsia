@@ -1,4 +1,8 @@
 import React from "react";
+import { SiTelegram } from "react-icons/si";
+import { IoMdMailUnread } from "react-icons/io";
+import { FaGithub, FaPhone } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
    return (
@@ -6,143 +10,72 @@ const Footer = () => {
          <div className="main-footer">
             <div className="container">
                <div className="row gy-4">
-                  <div className="col-lg-2 col-md-4 col-sm-6">
-                     <div className="footer-links">
-                        <div className="footer-title">
-                           <h3>About us</h3>
-                        </div>
-                        <div className="footer-content">
-                           <ul>
-                              <li>
-                                 <a href="index.htm" className="font-dark">
-                                    Home
-                                 </a>
-                              </li>
-                              <li>
-                                 <a href="shop.html" className="font-dark">
-                                    Shop
-                                 </a>
-                              </li>
-                              <li>
-                                 <a href="about-us.html" className="font-dark">
-                                    About Us
-                                 </a>
-                              </li>
-                              <li>
-                                 <a href="#" className="font-dark">
-                                    Blog
-                                 </a>
-                              </li>
-                              <li>
-                                 <a
-                                    href="contact-us.html"
-                                    className="font-dark"
-                                 >
-                                    Contact
-                                 </a>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
+                  <div className="footer-info__conteiner">
+                     <h3>
+                        Розроблено в якості пет проєкту студентом НФК НУБіП
+                        України, групи кн-201, Назаренком Є.В.
+                     </h3>
 
-                  <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                     <div className="footer-links">
-                        <div className="footer-title">
-                           <h3>New Categories</h3>
-                        </div>
-                        <div className="footer-content">
-                           <ul>
-                              <li>
-                                 <a href="shop.html" className="font-dark">
-                                    Latest Shoes
-                                 </a>
-                              </li>
-                              <li>
-                                 <a href="shop.html" className="font-dark">
-                                    Branded Jeans
-                                 </a>
-                              </li>
-                              <li>
-                                 <a href="shop.html" className="font-dark">
-                                    New Jackets
-                                 </a>
-                              </li>
-                              <li>
-                                 <a href="shop.html" className="font-dark">
-                                    Colorfull Hoodies
-                                 </a>
-                              </li>
-                              <li>
-                                 <a href="shop.html" className="font-dark">
-                                    Shiner Goggles
-                                 </a>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-
-                  <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                     <div className="footer-links">
-                        <div className="footer-title">
-                           <h3>Get Help</h3>
-                        </div>
-                        <div className="footer-content">
-                           <ul>
-                              <li>
-                                 <a href="#" className="font-dark">
-                                    Your Orders
-                                 </a>
-                              </li>
-                              <li>
-                                 <a href="#" className="font-dark">
-                                    Your Account
-                                 </a>
-                              </li>
-                              <li>
-                                 <a href="#" className="font-dark">
-                                    Track Orders
-                                 </a>
-                              </li>
-                              <li>
-                                 <a href="#" className="font-dark">
-                                    Your Wishlist
-                                 </a>
-                              </li>
-                              <li>
-                                 <a href="#" className="font-dark">
-                                    Shopping FAQs
-                                 </a>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-
-                  <div className="col-xl-3 col-lg-4 col-sm-6 d-none d-sm-block">
-                     <div className="footer-newsletter">
-                        <h3>Let’s stay in touch</h3>
-                        <div className="form-newsletter">
-                           <div className="input-group mb-4">
-                              <input
-                                 type="text"
-                                 className="form-control color-4"
-                                 placeholder="Your Email Address"
-                              ></input>
-                              <span
-                                 className="input-group-text"
-                                 id="basic-addon4"
-                              >
-                                 <i className="fas fa-arrow-right"></i>
-                              </span>
-                           </div>
-                           <p className="font-dark mb-0">
-                              Keep up to date with our latest news and special
-                              offers.
-                           </p>
-                        </div>
-                     </div>
+                     <h5 className="footer-info__contacts-title">
+                        Доступні контакти:
+                     </h5>
+                     <ul className="footer-info__contacts-list">
+                        <li className="footer-info__contact-li">
+                           <span className="footer-info__contact-source">
+                              <SiTelegram />
+                              Telegram:
+                           </span>
+                           <span className="footer-info__contact-value">
+                              @Faara_on
+                           </span>
+                        </li>
+                        <li className="footer-info__contact-li">
+                           <span className="footer-info__contact-source">
+                              <FaPhone />
+                              Phone:
+                           </span>
+                           <span className="footer-info__contact-value">
+                              +380 99 452 49 23
+                           </span>
+                        </li>
+                        <li className="footer-info__contact-li">
+                           <span className="footer-info__contact-source">
+                              <FaGithub />
+                              Github:
+                           </span>
+                           <span className="footer-info__contact-value">
+                              https://github.com/Pro-100Evhen
+                           </span>
+                        </li>
+                        <li className="footer-info__contact-li">
+                           <span className="footer-info__contact-source">
+                              <IoMdMailUnread />
+                              email:
+                           </span>
+                           <span className="footer-info__contact-value">
+                              zenanazarenko652@gmail.com
+                           </span>
+                        </li>
+                        <li className="footer-info__contact-li">
+                           <span className="footer-info__contact-source">
+                              <FaLinkedin />
+                              Linkedin:
+                           </span>
+                           <span className="footer-info__contact-value">
+                              https://www.linkedin.com/in/yevhen-nazarenko-b2b731266/
+                           </span>
+                        </li>
+                        <li className="footer-info__contact-li">
+                           <span className="footer-info__contact-source">
+                              <SiTelegram />
+                              Freelancehunt:
+                           </span>
+                           <span className="footer-info__contact-value">
+                              https://freelancehunt.com/freelancer/Yevhen1215.html
+                           </span>
+                        </li>
+                     </ul>
+                     <h3>З гордістю зроблено в Україні 🇺🇦</h3>
                   </div>
                </div>
             </div>

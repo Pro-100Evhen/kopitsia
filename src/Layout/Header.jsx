@@ -15,6 +15,7 @@ import "../assets/css/vendors/slick/slick-theme.css";
 import "../assets/css/vendors/slick/slick.css";
 
 import "../assets/css/main.scss";
+import { Link } from "react-router-dom";
 const Header = () => {
    return (
       <>
@@ -52,52 +53,13 @@ const Header = () => {
                                           </div>
                                        </li>
                                        <li>
-                                          <a
-                                             href="index.htm"
-                                             className="nav-link menu-title"
-                                          >
-                                             Home
-                                          </a>
+                                          <Link to="/">Головна</Link>
                                        </li>
                                        <li>
-                                          <a
-                                             href="shop.html"
-                                             className="nav-link menu-title"
-                                          >
-                                             Shop
-                                          </a>
+                                          <Link to="/cart">Кошик</Link>
                                        </li>
                                        <li>
-                                          <a
-                                             href="cart/list.html"
-                                             className="nav-link menu-title"
-                                          >
-                                             Cart
-                                          </a>
-                                       </li>
-                                       <li>
-                                          <a
-                                             href="about-us.html"
-                                             className="nav-link menu-title"
-                                          >
-                                             About Us
-                                          </a>
-                                       </li>
-                                       <li>
-                                          <a
-                                             href="contact-us.html"
-                                             className="nav-link menu-title"
-                                          >
-                                             Contact Us
-                                          </a>
-                                       </li>
-                                       <li>
-                                          <a
-                                             href="blog.html"
-                                             className="nav-link menu-title"
-                                          >
-                                             Blog
-                                          </a>
+                                          <Link to="/about">Про нас</Link>
                                        </li>
                                     </ul>
                                  </div>
