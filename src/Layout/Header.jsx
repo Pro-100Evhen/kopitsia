@@ -15,8 +15,13 @@ import "../assets/css/vendors/slick/slick-theme.css";
 import "../assets/css/vendors/slick/slick.css";
 
 import "../assets/css/main.scss";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 const Header = () => {
+   const { totalPrice, items, withListItems } = useSelector(
+      (state) => state.cart
+   );
    return (
       <>
          <header className="header-style-2" id="home">
@@ -53,13 +58,55 @@ const Header = () => {
                                           </div>
                                        </li>
                                        <li>
-                                          <Link to="/">Головна</Link>
+                                          <NavLink
+                                             className={({ isActive }) =>
+                                                isActive ? "activeLink" : ""
+                                             }
+                                             to="."
+                                             end
+                                          >
+                                             Головна
+                                          </NavLink>
                                        </li>
                                        <li>
-                                          <Link to="/cart">Кошик</Link>
+                                          <NavLink
+                                             className={({ isActive }) =>
+                                                isActive ? "activeLink" : ""
+                                             }
+                                             to="/cart"
+                                          >
+                                             Кошик
+                                          </NavLink>
                                        </li>
                                        <li>
-                                          <Link to="/about">Про нас</Link>
+                                          <NavLink
+                                             className={({ isActive }) =>
+                                                isActive ? "activeLink" : ""
+                                             }
+                                             to="/checkout"
+                                          >
+                                             Оплата
+                                          </NavLink>
+                                       </li>
+                                       <li>
+                                          <NavLink
+                                             className={({ isActive }) =>
+                                                isActive ? "activeLink" : ""
+                                             }
+                                             to="/about"
+                                          >
+                                             Про нас
+                                          </NavLink>
+                                       </li>
+                                       <li>
+                                          <NavLink
+                                             className={({ isActive }) =>
+                                                isActive ? "activeLink" : ""
+                                             }
+                                             to="/wishlist"
+                                          >
+                                             Список бажань
+                                          </NavLink>
                                        </li>
                                     </ul>
                                  </div>
@@ -99,7 +146,7 @@ const Header = () => {
                                  </li> */}
                                  <li className="onhover-dropdown wislist-dropdown">
                                     <div className="cart-media">
-                                       <a href="wishlist/list.html">
+                                       {/* <a href="wishlist/list.html">
                                           <svg
                                              xmlns="http://www.w3.org/2000/svg"
                                              width="24"
@@ -120,12 +167,39 @@ const Header = () => {
                                           >
                                              0
                                           </span>
-                                       </a>
+                                       </a> */}
+                                       <NavLink
+                                          className={({ isActive }) =>
+                                             isActive ? "activeLink" : ""
+                                          }
+                                          to="/wishlist"
+                                       >
+                                          <svg
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             width="24"
+                                             height="24"
+                                             viewBox="0 0 24 24"
+                                             fill="none"
+                                             stroke="currentColor"
+                                             strokeWidth="2"
+                                             strokeLinecap="round"
+                                             strokeLinejoin="round"
+                                             className="feather feather-heart"
+                                          >
+                                             <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                          </svg>
+                                          <span
+                                             id="wishlist-count"
+                                             className="label label-theme rounded-pill"
+                                          >
+                                             {withListItems.length}
+                                          </span>
+                                       </NavLink>
                                     </div>
                                  </li>
                                  <li className="onhover-dropdown wislist-dropdown">
                                     <div className="cart-media">
-                                       <a href="cart/list.html">
+                                       {/* <a href="cart/list.html">
                                           <svg
                                              xmlns="http://www.w3.org/2000/svg"
                                              width="24"
@@ -156,7 +230,44 @@ const Header = () => {
                                           >
                                              0
                                           </span>
-                                       </a>
+                                       </a> */}
+                                       <NavLink
+                                          className={({ isActive }) =>
+                                             isActive ? "activeLink" : ""
+                                          }
+                                          to="/cart"
+                                       >
+                                          <svg
+                                             xmlns="http://www.w3.org/2000/svg"
+                                             width="24"
+                                             height="24"
+                                             viewBox="0 0 24 24"
+                                             fill="none"
+                                             stroke="currentColor"
+                                             strokeWidth="2"
+                                             strokeLinecap="round"
+                                             strokeLinejoin="round"
+                                             className="feather feather-shopping-cart"
+                                          >
+                                             <circle
+                                                cx="9"
+                                                cy="21"
+                                                r="1"
+                                             ></circle>
+                                             <circle
+                                                cx="20"
+                                                cy="21"
+                                                r="1"
+                                             ></circle>
+                                             <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                          </svg>
+                                          <span
+                                             id="cart-count"
+                                             className="label label-theme rounded-pill"
+                                          >
+                                             {items.length}
+                                          </span>
+                                       </NavLink>
                                     </div>
                                  </li>
                                  <li className="onhover-dropdown">
@@ -193,54 +304,54 @@ const Header = () => {
 
                                     <Dropdown.Content>
                                        {auth.user ? (
-                                          <Dropdown.Link
+                                          <Dropdown.NavLink
                                              href={route("dashboard")}
                                              classNameName="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
                                           >
                                              Dashboard
-                                          </Dropdown.Link>
+                                          </Dropdown.NavLink>
                                        ) : (
                                           <>
-                                             <Dropdown.Link
+                                             <Dropdown.NavLink
                                                 href={route("login")}
                                                 classNameName="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
                                              >
                                                 Log in
-                                             </Dropdown.Link>
+                                             </Dropdown.NavLink>
 
-                                             <Dropdown.Link
+                                             <Dropdown.NavLink
                                                 href={route("register")}
                                                 classNameName="ms-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
                                              >
                                                 Register
-                                             </Dropdown.Link>
+                                             </Dropdown.NavLink>
                                           </>
                                        )}
                                     </Dropdown.Content>
                                  </Dropdown> */}
                                     {/*<ul>
                                                  {auth.user ? (
-                                                        <Link
+                                                        <NavLink
                                                             href={route('dashboard')}
                                                             classNameName="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
                                                         >
                                                             Dashboard
-                                                        </Link>
+                                                        </NavLink>
                                                     ) : (
                                                         <>
-                                                            <Link
+                                                            <NavLink
                                                                 href={route('login')}
                                                                 classNameName="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
                                                             >
                                                                 Log in
-                                                            </Link>
+                                                            </NavLink>
 
-                                                            <Link
+                                                            <NavLink
                                                                 href={route('register')}
                                                                 classNameName="ms-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
                                                             >
                                                                 Register
-                                                            </Link>
+                                                            </NavLink>
                                                         </>
                                                     )} */}
 

@@ -1,6 +1,59 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {
+   addProductToCart,
+   addProductToWishList,
+} from "../../redux/slices/CartSlice";
+import { toast } from "react-toastify";
 
 const ProductsPrev = ({ imageUrl, categories, name, price, id }) => {
+   const dispatch = useDispatch();
+   const itemCountInCart = useSelector(
+      (state) =>
+         state.cart.items.find((product) => product.id === id)?.count || 0
+   );
+
+   const onClickAddToCart = (event) => {
+      event.preventDefault();
+      const item = {
+         imageUrl,
+         categories,
+         name,
+         price,
+         id,
+      };
+
+      dispatch(addProductToCart(item));
+
+      toast.success(
+         `${name} успішно доданий до кошика [${itemCountInCart + 1} шт]`
+      );
+   };
+
+   const wishListItemCount = useSelector(
+      (state) =>
+         state.cart.withListItems.find((product) => product.id === id)?.count ||
+         0
+   );
+
+   const onClickAddToWishList = (event) => {
+      event.preventDefault();
+      const item = {
+         imageUrl,
+         categories,
+         name,
+         price,
+         id,
+      };
+
+      dispatch(addProductToWishList(item));
+      toast.success(
+         `${name} успішно доданий до списку бажань [${
+            wishListItemCount + 1
+         } шт]`
+      );
+   };
+
    return (
       <div className="col-xl-2 col-lg-2 col-6">
          <div className="product-box">
@@ -20,7 +73,7 @@ const ProductsPrev = ({ imageUrl, categories, name, price, id }) => {
                <div className="cart-wrap">
                   <ul>
                      <li>
-                        <a href="" className="addtocart-btn">
+                        <a onClick={onClickAddToCart} className="addtocart-btn">
                            <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="24"
@@ -61,7 +114,11 @@ const ProductsPrev = ({ imageUrl, categories, name, price, id }) => {
                         </a>
                      </li> */}
                      <li>
-                        <a href="" className="wishlist">
+                        <a
+                           href=""
+                           onClick={onClickAddToWishList}
+                           className="wishlist"
+                        >
                            <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="24"

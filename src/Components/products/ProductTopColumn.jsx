@@ -26,6 +26,7 @@ const ProductTopColumn = (props) => {
                            category={product.categories}
                            price={product.price}
                            imageUrl={product.imageUrl}
+                           id={product.id}
                         />
                      ))}
                </div>

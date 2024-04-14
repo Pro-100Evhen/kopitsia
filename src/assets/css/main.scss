@@ -157,3 +157,60 @@ header .profile-dropdown ul {
       }
    }
 }
+
+.main-footer {
+}
+.container {
+}
+.row {
+}
+.gy-4 {
+}
+.footer-info {
+   &__conteiner {
+   }
+
+   &__contacts-title {
+   }
+
+   &__contacts-list {
+      display: flex;
+      flex-direction: column;
+      padding-left: 0px;
+      gap: 10px;
+   }
+
+   &__contact-li {
+      display: flex;
+   }
+
+   &__contact-source {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+      padding-right: 10px;
+   }
+
+   &__contact-value {
+   }
+   &__made-in-ua {
+      text-align: center;
+   }
+}
+
+header .main-navbar .nav-menu > li > a {
+   transition: all 0.3s ease 0s;
+}
+header .main-navbar .nav-menu > li > a.activeLink {
+   color: #0565d2;
+   font-weight: 500;
+}
+
+.header-style-2 .main-menu .menu-right > ul > li a.activeLink {
+   color: var(--theme-color);
+}
+
+.addtocart-btn {
+   cursor: pointer;
+}

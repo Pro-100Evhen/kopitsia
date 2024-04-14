@@ -6,7 +6,6 @@ import Breadcrumbs from "../Components/Breadcrumbs";
 const About = () => {
    return (
       <>
-         <Header />
          <Breadcrumbs title="About-us" />
          {/* team leader section Start */}
          <section className="overflow-hidden">
@@ -70,7 +69,6 @@ const About = () => {
             </div>
          </section>
          {/* team leader section End */}
-         <Footer />
       </>
    );
 };

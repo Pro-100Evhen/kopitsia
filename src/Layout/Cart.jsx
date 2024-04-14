@@ -1,12 +1,10 @@
 import React from "react";
 import Breadcrumbs from "../Components/Breadcrumbs";
-import Header from "./Header";
-import Footer from "./Footer";
+import { NavLink, Navigate } from "react-router-dom";
 
 const Cart = () => {
    return (
       <>
-         <Header />
          <Breadcrumbs title="Cart" />
          {/* Cart Section Start */}
          <section className="cart-section section-b-space">
@@ -170,13 +168,20 @@ const Cart = () => {
                         </div>
                         <div className="col-sm-5 col-7">
                            <div className="left-side-button float-start">
-                              <a
+                              {/* <a
                                  href="../shop.html"
                                  className="btn btn-solid-default btn fw-bold mb-0 ms-0"
                               >
                                  <i className="fas fa-arrow-left" /> Continue
                                  Shopping
-                              </a>
+                              </a> */}
+                              <NavLink
+                                 className="btn btn-solid-default btn fw-bold mb-0 ms-0"
+                                 to="/"
+                              >
+                                 <i className="fas fa-arrow-left" /> Continue
+                                 Shopping
+                              </NavLink>
                            </div>
                         </div>
                      </div>
@@ -184,7 +189,7 @@ const Cart = () => {
                   <div className="cart-checkout-section">
                      <div className="row g-4">
                         <div className="col-lg-4 col-sm-6">
-                           <div className="promo-section">
+                           {/* <div className="promo-section">
                               <form className="row g-3">
                                  <div className="col-7">
                                     <input
@@ -200,17 +205,17 @@ const Cart = () => {
                                     </button>
                                  </div>
                               </form>
-                           </div>
+                           </div> */}
                         </div>
                         <div className="col-lg-4 col-sm-6 ">
                            <div className="checkout-button">
-                              <a
-                                 href="checkout"
+                              <NavLink
                                  className="btn btn-solid-default btn fw-bold"
+                                 to="/checkout"
                               >
-                                 Check Out{" "}
+                                 Check Out
                                  <i className="fas fa-arrow-right ms-1" />
-                              </a>
+                              </NavLink>
                            </div>
                         </div>
                         <div className="col-lg-4">
@@ -241,7 +246,6 @@ const Cart = () => {
                </div>
             </div>
          </section>
-         <Footer />
       </>
    );
 };

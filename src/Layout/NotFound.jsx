@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 const NotFound = () => {
    return (
       <>
-         <Header />
          <div className="notFound__conteiner">
             <div className="notFound__info">
                <h3 className="notFound__error">Помилка 404 </h3>
@@ -20,7 +19,6 @@ const NotFound = () => {
                </Link>
             </div>
          </div>
-         <Footer />
       </>
    );
 };

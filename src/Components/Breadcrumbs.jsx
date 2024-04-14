@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Breadcrumbs = ({ title }) => {
    return (
@@ -26,9 +27,9 @@ const Breadcrumbs = ({ title }) => {
                      <nav>
                         <ol className="breadcrumb">
                            <li className="breadcrumb-item">
-                              <a href="index.htm">
+                              <NavLink to="/">
                                  <i className="fas fa-home" />
-                              </a>
+                              </NavLink>
                            </li>
                            <li
                               className="breadcrumb-item active"

@@ -2,17 +2,19 @@ import React from "react";
 import { SiTelegram } from "react-icons/si";
 import { IoMdMailUnread } from "react-icons/io";
 import { FaGithub, FaPhone } from "react-icons/fa6";
-import { FaLinkedin } from "react-icons/fa";
+import { FaLinkedin, FaFreeCodeCamp } from "react-icons/fa";
+import Message from "../Components/Messages/Message";
 
 const Footer = () => {
    return (
       <footer className="footer-sm-space mt-5">
+         <Message />
          <div className="main-footer">
             <div className="container">
                <div className="row gy-4">
                   <div className="footer-info__conteiner">
                      <h3>
-                        Розроблено в якості пет проєкту студентом НФК НУБіП
+                        Розроблено в якості пет-проєкту студентом НФК НУБіП
                         України, групи кн-201, Назаренком Є.В.
                      </h3>
 
@@ -67,7 +69,7 @@ const Footer = () => {
                         </li>
                         <li className="footer-info__contact-li">
                            <span className="footer-info__contact-source">
-                              <SiTelegram />
+                              <FaFreeCodeCamp />
                               Freelancehunt:
                            </span>
                            <span className="footer-info__contact-value">
@@ -75,7 +77,9 @@ const Footer = () => {
                            </span>
                         </li>
                      </ul>
-                     <h3>З гордістю зроблено в Україні 🇺🇦</h3>
+                     <h3 className="footer-info__made-in-ua">
+                        З гордістю зроблено в Україні 🇺🇦
+                     </h3>
                   </div>
                </div>
             </div>

@@ -12,8 +12,6 @@ import Header from "../Layout/Header";
 function Home() {
    return (
       <>
-         <Header />
-
          <HeroSlider />
 
          {/* Банери категорій продуктів, створяться після підключення redux */}
@@ -31,8 +29,6 @@ function Home() {
          {/* <ClassicSlider /> */}
 
          <div id="qvmodal"></div>
-
-         <Footer />
 
          {/* Картка купити, коли тикаєш на купити */}
          <CartBuyProduct />

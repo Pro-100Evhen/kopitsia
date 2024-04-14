@@ -1,6 +1,58 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { toast } from "react-toastify";
+import {
+   addProductToCart,
+   addProductToWishList,
+} from "../../redux/slices/CartSlice";
 
 const ProductGorizontalPrev = (props) => {
+   const dispatch = useDispatch();
+   const itemCountInCart = useSelector(
+      (state) =>
+         state.cart.items.find((product) => product.id === props.id)?.count || 0
+   );
+
+   const onClickAddToCart = (event) => {
+      event.preventDefault();
+      const item = {
+         imageUrl: props.imageUrl,
+         categories: props.categories,
+         name: props.name,
+         price: props.price,
+         id: props.id,
+      };
+
+      dispatch(addProductToCart(item));
+
+      toast.success(
+         `${props.name} успішно доданий до кошика [${itemCountInCart + 1} шт]`
+      );
+   };
+
+   const wishListItemCount = useSelector(
+      (state) =>
+         state.cart.withListItems.find((product) => product.id === props.id)
+            ?.count || 0
+   );
+
+   const onClickAddToWishList = (event) => {
+      event.preventDefault();
+      const item = {
+         imageUrl: props.imageUrl,
+         categories: props.categories,
+         name: props.name,
+         price: props.price,
+         id: props.id,
+      };
+
+      dispatch(addProductToWishList(item));
+      toast.success(
+         `${props.name} успішно доданий до списку бажань [${
+            wishListItemCount + 1
+         } шт]`
+      );
+   };
    return (
       <div className="col-lg-12 col-md-6 col-12">
          <div className="product-image">
@@ -22,6 +74,7 @@ const ProductGorizontalPrev = (props) => {
                   <div className="cart-wrap">
                      <ul>
                         <li
+                           onClick={onClickAddToCart}
                            data-bs-toggle="tooltip"
                            data-bs-placement="top"
                            title="Buy"
