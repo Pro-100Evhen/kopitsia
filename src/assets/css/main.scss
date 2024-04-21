@@ -214,3 +214,35 @@ header .main-navbar .nav-menu > li > a.activeLink {
 .addtocart-btn {
    cursor: pointer;
 }
+
+.cart__clear-cart-wrap {
+   width: 100%;
+   height: 100%;
+   border: 2px solid #000;
+   border-radius: 15px;
+   padding: 80px 20px;
+}
+
+.cart__clear-cart-title {
+   color: #000;
+   font-size: 28px;
+   line-height: normal;
+   font-weight: 500;
+}
+.cart__clear-cart-home-link {
+   color: #fff;
+}
+
+.white {
+   color: #fff;
+}
+
+.theme-color.d-block.text-capitalize.clear-cart-btn {
+   font-weight: 500;
+   text-decoration: none;
+   cursor: pointer;
+}
+
+.remowe-product-from-cart {
+   cursor: pointer;
+}

@@ -26,8 +26,20 @@ const CartSlice = createSlice({
       },
       remoweProductFromCart(state, action) {
          state.items = state.items.filter(
-            (product) => product.id !== action.payload
+            (product) => product.id !== action.payload.id
          );
+      },
+      minusItemInCartCount(state, action) {
+         const findProduct = state.items.find(
+            (product) => product.id === action.payload.id
+         );
+         if (findProduct.count === 1) {
+            state.items = state.items.filter(
+               (product) => product.id !== action.payload.id
+            );
+         } else if (findProduct.count > 1) {
+            findProduct.count--;
+         }
       },
       addProductToWishList(state, action) {
          const findProductInWishList = state.withListItems.find(
@@ -63,5 +75,6 @@ export const {
    remoweProductFromWithList,
    clearCart,
    clearWithList,
+   minusItemInCartCount,
 } = CartSlice.actions;
 export default CartSlice.reducer;
