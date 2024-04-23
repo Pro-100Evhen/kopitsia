@@ -47,7 +47,7 @@ const ProductGorizontalPrev = (props) => {
       };
 
       dispatch(addProductToWishList(item));
-      toast.success(
+      toast.info(
          `${props.name} успішно доданий до списку бажань [${
             wishListItemCount + 1
          } шт]`
@@ -136,6 +136,7 @@ const ProductGorizontalPrev = (props) => {
                            data-bs-toggle="tooltip"
                            data-bs-placement="top"
                            title="Wishlist"
+                           onClick={onClickAddToWishList}
                         >
                            <a href="wishlist.php" className="wishlist">
                               <svg

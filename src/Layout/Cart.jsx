@@ -14,16 +14,9 @@ const Cart = () => {
       dispatch(clearCart());
    };
 
-   // const addProductCountHandler = (id) => {
-   //    dispatch(addProductToCart({ id }));
-   // };
-   // const remoweCountHandler = (id) => {
-   //    dispatch(remoweProductFromCart({ id }));
-   // };
-
    return (
       <>
-         <Breadcrumbs title="Cart" />
+         <Breadcrumbs title="Кошик" />
          {/* Cart Section Start */}
          <section className="cart-section section-b-space">
             <div className="container">
@@ -33,12 +26,12 @@ const Cart = () => {
                         <table className="table cart-table">
                            <thead>
                               <tr className="table-head">
-                                 <th scope="col">image</th>
-                                 <th scope="col">product name</th>
-                                 <th scope="col">price</th>
-                                 <th scope="col">quantity</th>
-                                 <th scope="col">total</th>
-                                 <th scope="col">action</th>
+                                 <th scope="col">Зображення</th>
+                                 <th scope="col">Назва товару</th>
+                                 <th scope="col">Ціна</th>
+                                 <th scope="col">Кількість</th>
+                                 <th scope="col">ПІдсумок</th>
+                                 <th scope="col">Видалити</th>
                               </tr>
                            </thead>
                            <tbody>

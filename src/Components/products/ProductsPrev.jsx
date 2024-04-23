@@ -47,7 +47,7 @@ const ProductsPrev = ({ imageUrl, categories, name, price, id }) => {
       };
 
       dispatch(addProductToWishList(item));
-      toast.success(
+      toast.info(
          `${name} успішно доданий до списку бажань [${
             wishListItemCount + 1
          } шт]`

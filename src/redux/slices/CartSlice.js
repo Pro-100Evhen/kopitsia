@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { toast } from "react-toastify";
 
 const initialState = {
    totalPrice: 0,
+   totalWishPrice: 0,
    items: [],
    withListItems: [],
 };
@@ -41,6 +41,18 @@ const CartSlice = createSlice({
             findProduct.count--;
          }
       },
+      minusItemInWishListCount(state, action) {
+         const findProductWishList = state.withListItems.find(
+            (product) => product.id === action.payload.id
+         );
+         if (findProductWishList.count === 1) {
+            state.withListItems = state.withListItems.filter(
+               (product) => product.id !== action.payload.id
+            );
+         } else if (findProductWishList.count > 1) {
+            findProductWishList.count--;
+         }
+      },
       addProductToWishList(state, action) {
          const findProductInWishList = state.withListItems.find(
             (product) => product.id === action.payload.id
@@ -50,13 +62,13 @@ const CartSlice = createSlice({
          } else {
             state.withListItems.push({ ...action.payload, count: 1 });
          }
-         state.totalPrice = state.withListItems.reduce((sum, item) => {
+         state.totalWishPrice = state.withListItems.reduce((sum, item) => {
             return item.price * item.count + sum;
          }, 0);
       },
       remoweProductFromWithList(state, action) {
          state.withListItems = state.withListItems.filter(
-            (product) => product.id !== action.payload
+            (product) => product.id !== action.payload.id
          );
       },
       clearCart(state) {
@@ -76,5 +88,6 @@ export const {
    clearCart,
    clearWithList,
    minusItemInCartCount,
+   minusItemInWishListCount,
 } = CartSlice.actions;
 export default CartSlice.reducer;
