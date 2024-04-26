@@ -1,10 +1,18 @@
 import React from "react";
 import Breadcrumbs from "../Components/Breadcrumbs";
+import { useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
 
 const CheckOut = () => {
+   const showCartParams = () => {
+      const cartParamsBlock = document
+         .querySelector(".cart-pay-deteils")
+         .classList.toggle("hide-other-payment-method");
+   };
+
    return (
       <>
-         <Breadcrumbs title="Checkout" />
+         <Breadcrumbs title="Оформлення замовлення" />
 
          {/* Cart Section Start */}
          <section className="section-b-space">
@@ -22,58 +30,58 @@ const CheckOut = () => {
                            defaultValue="CVH6XgdFhoUV6OBdiTIlT2bviIidpb0qD6U1Vf68"
                         />
                         <div id="billingAddress" className="row g-4">
-                           <h3 className="mb-3 theme-color">Billing address</h3>
+                           <h3 className="mb-3 theme-color">Платіжна адреса</h3>
                            <div className="col-md-6">
                               <label htmlFor="name" className="form-label">
-                                 Name
+                                 Ім'я
                               </label>
                               <input
                                  type="text"
                                  className="form-control"
                                  id="name"
                                  name="name"
-                                 placeholder="Enter Full Name"
+                                 placeholder="Введіть повне ім'я"
                               />
                            </div>
                            <div className="col-md-6">
                               <label htmlFor="phone" className="form-label">
-                                 Phone
+                                 Телефон
                               </label>
                               <input
                                  type="text"
                                  className="form-control"
                                  id="phone"
                                  name="phone"
-                                 placeholder="Enter Phone Number"
+                                 placeholder="Введіть номер телефону"
                               />
                            </div>
                            <div className="col-md-6">
                               <label htmlFor="locality" className="form-label">
-                                 Locality
+                                 Місцевість
                               </label>
                               <input
                                  type="text"
                                  className="form-control"
                                  id="locality"
                                  name="locality"
-                                 placeholder="Locality"
+                                 placeholder="Місцевість"
                               />
                            </div>
                            <div className="col-md-6">
                               <label htmlFor="landmark" className="form-label">
-                                 Landmark
+                                 Орієнтир
                               </label>
                               <input
                                  type="text"
                                  className="form-control"
                                  id="landmark"
                                  name="landmark"
-                                 placeholder="Landmark"
+                                 placeholder="Орієнтир"
                               />
                            </div>
                            <div className="col-md-12">
                               <label htmlFor="address" className="form-label">
-                                 Address
+                                 Адреса
                               </label>
                               <textarea
                                  className="form-control"
@@ -84,17 +92,17 @@ const CheckOut = () => {
                            </div>
                            <div className="col-md-3">
                               <label htmlFor="city" className="form-label">
-                                 City
+                                 Місто
                               </label>
                               <input
                                  type="text"
                                  className="form-control"
                                  id="city"
                                  name="city"
-                                 placeholder="City"
+                                 placeholder="Місто"
                               />
                            </div>
-                           <div className="col-md-3">
+                           {/* <div className="col-md-3">
                               <label htmlFor="country" className="form-label">
                                  Country
                               </label>
@@ -108,8 +116,8 @@ const CheckOut = () => {
                               <div className="invalid-feedback">
                                  Please select a valid country.
                               </div>
-                           </div>
-                           <div className="col-md-3">
+                           </div> */}
+                           {/* <div className="col-md-3">
                               <label htmlFor="state" className="form-label">
                                  State
                               </label>
@@ -168,7 +176,7 @@ const CheckOut = () => {
                                     West Bengal
                                  </option>
                               </select>
-                           </div>
+                           </div> */}
                            <div className="col-md-3">
                               <label htmlFor="zip" className="form-label">
                                  Zip
@@ -181,7 +189,7 @@ const CheckOut = () => {
                                  placeholder={123456}
                               />
                            </div>
-                           <div
+                           {/* <div
                               className="col-md-12 form-check ps-0 mt-3 custome-form-check"
                               style={{ paddingLeft: "15px !important" }}
                            >
@@ -197,9 +205,9 @@ const CheckOut = () => {
                               >
                                  Shipping address is same as Billing Address
                               </label>
-                           </div>
+                           </div> */}
                         </div>
-                        <div id="shippingAddress" className="row g-4 mt-5">
+                        {/* <div id="shippingAddress" className="row g-4 mt-5">
                            <h3 className="mb-3 theme-color">
                               Shipping address
                            </h3>
@@ -358,8 +366,8 @@ const CheckOut = () => {
                                  placeholder={123456}
                               />
                            </div>
-                        </div>
-                        <div className="form-check ps-0 mt-3 custome-form-check">
+                        </div> */}
+                        {/* <div className="form-check ps-0 mt-3 custome-form-check">
                            <input
                               className="checkbox_animated check-it"
                               type="checkbox"
@@ -372,12 +380,13 @@ const CheckOut = () => {
                            >
                               Save this information for next time
                            </label>
-                        </div>
+                        </div> */}
                         <hr className="my-lg-5 my-4" />
-                        <h3 className="mb-3">Payment</h3>
+                        <h3 className="mb-3">Оплата</h3>
                         <div className="d-block my-3">
                            <div className="form-check custome-radio-box">
                               <input
+                                 onChange={showCartParams}
                                  className="form-check-input"
                                  type="radio"
                                  name="flexRadioDefault"
@@ -385,11 +394,12 @@ const CheckOut = () => {
                                  id="cod"
                               />
                               <label className="form-check-label" htmlFor="cod">
-                                 COD
+                                 Оплата накладеним платежем
                               </label>
                            </div>
                            <div className="form-check custome-radio-box">
                               <input
+                                 onChange={showCartParams}
                                  className="form-check-input"
                                  type="radio"
                                  name="flexRadioDefault"
@@ -399,28 +409,14 @@ const CheckOut = () => {
                                  className="form-check-label"
                                  htmlFor="debit"
                               >
-                                 Debit card
-                              </label>
-                           </div>
-                           <div className="form-check custome-radio-box">
-                              <input
-                                 className="form-check-input"
-                                 type="radio"
-                                 name="flexRadioDefault"
-                                 id="paypal"
-                              />
-                              <label
-                                 className="form-check-label"
-                                 htmlFor="paypal"
-                              >
-                                 PayPal
+                                 За номером карти
                               </label>
                            </div>
                         </div>
-                        <div className="row g-4" style={{ display: "none" }}>
+                        <div className="cart-pay-deteils row g-4 hide-other-payment-method">
                            <div className="col-md-6">
                               <label htmlFor="cc-name" className="form-label">
-                                 Name on card
+                                 Ім'я на картці
                               </label>
                               <input
                                  type="text"
@@ -428,12 +424,12 @@ const CheckOut = () => {
                                  id="cc-name"
                               />
                               <div id="emailHelp" className="form-text">
-                                 Full name as displayed on card
+                                 Повне ім'я, як вказано на картці
                               </div>
                            </div>
                            <div className="col-md-6">
                               <label htmlFor="cc-number" className="form-label">
-                                 Credit card number
+                                 Номер кредитної картки
                               </label>
                               <input
                                  type="text"
@@ -441,7 +437,7 @@ const CheckOut = () => {
                                  id="cc-number"
                               />
                               <div className="invalid-feedback">
-                                 Credit card number is required
+                                 Номер кредитної картки обов'язковий
                               </div>
                            </div>
                            <div className="col-md-3">
@@ -449,7 +445,7 @@ const CheckOut = () => {
                                  htmlFor="expiration"
                                  className="form-label"
                               >
-                                 Expiration
+                                 Закінчення терміну дії
                               </label>
                               <input
                                  type="text"
@@ -468,36 +464,45 @@ const CheckOut = () => {
                               />
                            </div>
                         </div>
-                        <button
-                           className="btn btn-solid-default mt-4"
+                        {/* <button
+                           className="btn btn-solid-default mt-4 white"
                            type="submit"
                         >
-                           Place Order
-                        </button>
+                           Оформити замовлення
+                        </button> */}
+                        <NavLink
+                           to="/thankyou"
+                           className="btn btn-solid-default mt-4 white"
+                        >
+                           Оформити замовлення
+                        </NavLink>
                      </form>
                   </div>
                   <div className="col-lg-4">
                      <div className="your-cart-box">
                         <h3 className="mb-3 d-flex text-capitalize">
-                           Your cart
+                           Ваш кошик
                            <span className="badge bg-theme new-badge rounded-pill ms-auto bg-dark">
-                              0
+                              {useSelector((state) => state.cart.items.length)}
                            </span>
                         </h3>
                         <ul className="list-group mb-3">
                            <li className="list-group-item d-flex justify-content-between lh-condensed active">
                               <div className="text-dark">
-                                 <h6 className="my-0">Tax</h6>
+                                 <h6 className="my-0">Промокод</h6>
                                  <small />
                               </div>
                               <span>$0.00</span>
                            </li>
                            <li className="list-group-item d-flex lh-condensed justify-content-between">
-                              <span className="fw-bold">Total (USD)</span>
-                              <strong>$0.00</strong>
+                              <span className="fw-bold">Підсумки (Грн)</span>
+                              <strong>
+                                 {useSelector((state) => state.cart.totalPrice)}
+                                 грн
+                              </strong>
                            </li>
                         </ul>
-                        <form className="card border-0">
+                        {/* <form className="card border-0">
                            <div className="input-group custome-imput-group">
                               <input
                                  type="text"
@@ -513,7 +518,8 @@ const CheckOut = () => {
                                  </button>
                               </div>
                            </div>
-                        </form>
+                        </form> */}
+                        {/* Допиляти функціонал промокоду */}
                      </div>
                   </div>
                </div>

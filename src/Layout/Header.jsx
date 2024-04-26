@@ -85,7 +85,7 @@ const Header = () => {
                                              }
                                              to="/checkout"
                                           >
-                                             Оплата
+                                             Оформлення замовлення
                                           </NavLink>
                                        </li>
                                        <li>
@@ -96,6 +96,16 @@ const Header = () => {
                                              to="/about"
                                           >
                                              Про нас
+                                          </NavLink>
+                                       </li>
+                                       <li>
+                                          <NavLink
+                                             className={({ isActive }) =>
+                                                isActive ? "activeLink" : ""
+                                             }
+                                             to="/thankyou"
+                                          >
+                                             Дякую за покупку
                                           </NavLink>
                                        </li>
                                        <li>

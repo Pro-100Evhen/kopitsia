@@ -7,6 +7,7 @@ import NotFound from "./Layout/NotFound";
 import MainHFTemplate from "./Layout/MainHFTemplate";
 import Wishlist from "./Layout/WishList";
 import CheckOut from "./Layout/CheckOut";
+import ThankYou from "./Layout/ThankYou";
 
 function App() {
    return (
@@ -18,6 +19,7 @@ function App() {
                <Route path="cart" element={<Cart />} />
                <Route path="wishlist" element={<Wishlist />} />
                <Route path="checkout" element={<CheckOut />} />
+               <Route path="thankyou" element={<ThankYou />} />
                <Route path="*" element={<NotFound />} />
             </Route>
          </Routes>
