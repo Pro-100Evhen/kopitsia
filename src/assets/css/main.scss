@@ -300,3 +300,85 @@ header .cart-btn .cart-total {
    svg {
    stroke: #fff;
 }
+header .cart-menu ul {
+   padding: 0;
+}
+body header ul .emty-cart-litle-label {
+   font-size: 22px;
+   margin: 20px 0px 0px 0px;
+}
+header .btn-solid-default:hover::before {
+   opacity: 0.9;
+   transform: scale(0.9, 0.9);
+}
+header .main-navbar .nav-menu.hideMenu {
+   right: 0px;
+}
+.cart-wrap ul {
+   padding: 0;
+}
+
+@media (max-width: 360px) {
+   html body .poster-section .prev {
+      left: 10px !important;
+   }
+}
+@media (max-width: 575px) {
+   .poster-section .next {
+      bottom: 21%;
+      left: auto !important;
+      right: 10px !important;
+   }
+}
+@media (max-width: 797px) {
+   .product-box .cart-wrap {
+      opacity: 1;
+      transition: all 0.5s ease;
+   }
+   .product-box .cart-wrap a {
+      width: 35px;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+   }
+   .product-image .product-details .cart-wrap {
+      position: relative;
+      transform: none;
+   }
+   body .product-image .product-details .cart-wrap ul li {
+      opacity: 1;
+      transform: translateY(0);
+   }
+   body .product-image .product-details .cart-wrap {
+      opacity: 1;
+      padding: 0;
+   }
+   .double-row.row {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+   }
+   .double-row.row .col-5 {
+      width: 100%;
+   }
+}
+
+@media (max-width: 767px) {
+   .cart-section tbody tr {
+      display: flex;
+      flex-wrap: wrap;
+      width: calc(100vw - 20px);
+   }
+   body .cart-section .cart-table thead th {
+      display: none;
+   }
+   .cart-section tbody tr td {
+      width: 100%;
+   }
+   .cart-section tbody tr td:nth-last-child(-n + 4) {
+      display: block;
+   }
+   body .cart-section tbody tr td .mobile-cart-content {
+      display: none;
+   }
+}

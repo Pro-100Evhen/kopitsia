@@ -26,6 +26,17 @@ const Header = () => {
 
    const CartItems = useSelector((state) => state.cart.items);
 
+   const showMobMenu = () => {
+      document.querySelector(".nav-menu").classList.toggle("hideMenu");
+   };
+
+   const showCart = (event) => {
+      event.preventDefault();
+      document
+         .querySelector(".onhover-dropdown.cart-dropdown")
+         .classList.toggle("show");
+   };
+
    return (
       <>
          <header className="header-style-2" id="home">
@@ -36,26 +47,32 @@ const Header = () => {
                         <div className="main-menu">
                            <div className="menu-left">
                               <div className="brand-logo">
-                                 <a href="index.htm">
+                                 <NavLink to="/">
                                     <img
                                        src="assets/images/logo.png"
                                        className="h-logo img-fluid blur-up lazyload"
                                        alt="logo"
                                     ></img>
-                                 </a>
+                                 </NavLink>
                               </div>
                            </div>
 
                            <nav>
                               <div className="main-navbar">
                                  <div id="mainnav">
-                                    <div className="toggle-nav">
+                                    <div
+                                       onClick={showMobMenu}
+                                       className="toggle-nav"
+                                    >
                                        <i className="fa fa-bars sidebar-bar"></i>
                                     </div>
                                     <ul className="nav-menu">
                                        <li className="back-btn d-xl-none">
-                                          <div className="close-btn">
-                                             Menu
+                                          <div
+                                             onClick={showMobMenu}
+                                             className="close-btn"
+                                          >
+                                             Меню
                                              <span className="mobile-back">
                                                 <i className="fa fa-angle-left"></i>
                                              </span>
@@ -254,7 +271,10 @@ const Header = () => {
                                     </div>
                                  </li> */}
 
-                                 <li className="onhover-dropdown cart-dropdown show">
+                                 <li
+                                    onClick={showCart}
+                                    className="onhover-dropdown cart-dropdown "
+                                 >
                                     <NavLink
                                        to="/cart"
                                        type="button"
@@ -320,12 +340,18 @@ const Header = () => {
                                              </span>
                                           </div>
                                           <ul className="custom-scroll">
-                                             {CartItems.map((product) => (
-                                                <LitleCartItem
-                                                   key={product.id}
-                                                   {...product}
-                                                />
-                                             ))}
+                                             {CartItems.length > 0 ? (
+                                                CartItems.map((product) => (
+                                                   <LitleCartItem
+                                                      key={product.id}
+                                                      {...product}
+                                                   />
+                                                ))
+                                             ) : (
+                                                <li className="emty-cart-litle-label">
+                                                   В кошику поки немає товарів
+                                                </li>
+                                             )}
                                           </ul>
                                        </div>
                                        <div className="cart-btn">
@@ -492,7 +518,7 @@ const Header = () => {
                </div>
             </div>
          </header>
-         <div className="mobile-menu d-sm-none">
+         {/* <div className="mobile-menu d-sm-none">
             <ul>
                <li>
                   <a href="demo3.php" className="active">
@@ -538,7 +564,7 @@ const Header = () => {
                   </a>
                </li>
             </ul>
-         </div>
+         </div> */}
       </>
    );
 };

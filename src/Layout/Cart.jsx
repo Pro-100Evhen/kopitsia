@@ -20,7 +20,7 @@ const Cart = () => {
          {/* Cart Section Start */}
          <section className="cart-section section-b-space">
             <div className="container">
-               <div className="row">
+               <div className="double-row row">
                   <div className="col-md-12 text-center">
                      {CartItems.length > 0 ? (
                         <table className="table cart-table">

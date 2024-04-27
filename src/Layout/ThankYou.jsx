@@ -30,14 +30,14 @@ const ThankYou = () => {
                            </div>
                         </div>
                         <div className="success-contain">
-                           <h4>Order Success</h4>
+                           <h4>Успіх замовлення!</h4>
                            <h5 className="font-light">
-                              Payment Is Successfully Processsed And Your Order
-                              Is On The Way
+                              Оплата успішно оброблена і ваше замовлення вже в
+                              дорозі
                            </h5>
-                           <h6 className="font-light">
+                           {/* <h6 className="font-light">
                               Transaction ID:267676GHERT105467
-                           </h6>
+                           </h6> */}
                         </div>
                      </div>
                   </div>
