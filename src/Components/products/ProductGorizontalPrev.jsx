@@ -56,15 +56,15 @@ const ProductGorizontalPrev = (props) => {
    return (
       <div className="col-lg-12 col-md-6 col-12">
          <div className="product-image">
-            <a href="product/details.html">
+            <div>
                <img
                   src={props.imageUrl}
                   className="blur-up lazyload"
                   alt="product"
                />
-            </a>
+            </div>
             <div className="product-details">
-               <a href="product/details.html">
+               <div>
                   <h6 className="font-light">{props.name}</h6>
                   <h3>{props.category}</h3>
                   <h4 className="font-light mt-1">
@@ -157,7 +157,7 @@ const ProductGorizontalPrev = (props) => {
                         </li>
                      </ul>
                   </div>
-               </a>
+               </div>
             </div>
          </div>
       </div>

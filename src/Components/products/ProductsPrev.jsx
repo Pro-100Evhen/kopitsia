@@ -58,13 +58,13 @@ const ProductsPrev = ({ imageUrl, categories, name, price, id }) => {
       <div className="col-xl-2 col-lg-2 col-6">
          <div className="product-box">
             <div className="img-wrapper">
-               <a href="product/details.html">
+               <div>
                   <img
                      src={imageUrl}
                      className="w-100 bg-img blur-up lazyload"
                      alt="productPhoto"
                   />
-               </a>
+               </div>
                <div className="circle-shape"></div>
                <span className="background-text">Kopitsia</span>
                <div className="label-block">
@@ -163,9 +163,9 @@ const ProductsPrev = ({ imageUrl, categories, name, price, id }) => {
                      </div> */}
                   </div>
                   <p className="font-light mb-sm-2 mb-0">{categories}</p>
-                  <a href="product/details.html" className="font-default">
+                  <div className="font-default">
                      <h5>{name}</h5>
-                  </a>
+                  </div>
                </div>
             </div>
          </div>

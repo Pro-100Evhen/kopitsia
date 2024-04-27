@@ -5,7 +5,7 @@ function HeroSliderNextArrow(props) {
    const { onClick } = props;
    return (
       <div onClick={onClick} className="custom-arrow next">
-         <span>Next</span>
+         <span>Наст</span>
          <i className="fas fa-chevron-right ms-3"></i>
       </div>
    );
@@ -16,7 +16,7 @@ function HeroSliderPrevArrow(props) {
    return (
       <div onClick={onClick} className="custom-arrow prev">
          <i className="fas fa-chevron-left me-3"></i>
-         <span>Prev</span>
+         <span>Попер</span>
       </div>
    );
 }
@@ -166,24 +166,25 @@ const HeroSlider = () => {
 
          <div className="left-side-contain">
             <div className="banner-left">
-               <h4>
+               {/* <h4>
                   Sale <span className="theme-color">35% Off</span>
-               </h4>
+               </h4> */}
                <h1>
-                  New Latest <span>Dresses</span>
+                  Найкрутіші <span>плюшеві іграшки</span>
                </h1>
                <p>
-                  BUY ONE GET ONE <span className="theme-color">FREE</span>
+                  Купуй одну, для{" "}
+                  <span className="theme-color">початку колекції</span>
                </p>
                <h2>
-                  $79.00{" "}
+                  600грн{" "}
                   <span className="theme-color">
-                     <del>$65.00</del>
+                     <del>376грн</del>
                   </span>
                </h2>
                <p className="poster-details mb-0">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
+                  Дитячі іграшки з штучного хутра, тканини і набивного
+                  матеріалів.
                </p>
             </div>
          </div>

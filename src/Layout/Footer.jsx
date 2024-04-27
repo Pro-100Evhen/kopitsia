@@ -28,7 +28,7 @@ const Footer = () => {
                               Telegram:
                            </span>
                            <span className="footer-info__contact-value">
-                              @Faara_on
+                              <a href="https://t.me/Faara_on">@Faara_on</a>
                            </span>
                         </li>
                         <li className="footer-info__contact-li">
@@ -37,7 +37,7 @@ const Footer = () => {
                               Phone:
                            </span>
                            <span className="footer-info__contact-value">
-                              +380 99 452 49 23
+                              <a href="tel:+380994524923">+380 99 452 49 23</a>
                            </span>
                         </li>
                         <li className="footer-info__contact-li">
@@ -46,7 +46,9 @@ const Footer = () => {
                               Github:
                            </span>
                            <span className="footer-info__contact-value">
-                              https://github.com/Pro-100Evhen
+                              <a href="https://github.com/Pro-100Evhen">
+                                 https://github.com/Pro-100Evhen
+                              </a>
                            </span>
                         </li>
                         <li className="footer-info__contact-li">
@@ -55,7 +57,9 @@ const Footer = () => {
                               email:
                            </span>
                            <span className="footer-info__contact-value">
-                              zenanazarenko652@gmail.com
+                              <a href="email:zenanazarenko652@gmail.com">
+                                 zenanazarenko652@gmail.com
+                              </a>
                            </span>
                         </li>
                         <li className="footer-info__contact-li">
@@ -64,7 +68,9 @@ const Footer = () => {
                               Linkedin:
                            </span>
                            <span className="footer-info__contact-value">
-                              https://www.linkedin.com/in/yevhen-nazarenko-b2b731266/
+                              <a href="https://www.linkedin.com/in/yevhen-nazarenko-b2b731266/">
+                                 https://www.linkedin.com/in/yevhen-nazarenko-b2b731266/
+                              </a>
                            </span>
                         </li>
                         <li className="footer-info__contact-li">
@@ -73,7 +79,9 @@ const Footer = () => {
                               Freelancehunt:
                            </span>
                            <span className="footer-info__contact-value">
-                              https://freelancehunt.com/freelancer/Yevhen1215.html
+                              <a href="https://freelancehunt.com/freelancer/Yevhen1215.html">
+                                 https://freelancehunt.com/freelancer/Yevhen1215.html
+                              </a>
                            </span>
                         </li>
                      </ul>

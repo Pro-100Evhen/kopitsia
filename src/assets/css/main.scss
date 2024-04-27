@@ -363,6 +363,23 @@ header .main-navbar .nav-menu.hideMenu {
    }
 }
 
+.cart-section tbody tr h3 {
+   font-size: 18px;
+}
+.cart-section tbody tr .cart-prev-img {
+   width: auto;
+   height: 80px;
+}
+.cart-section tbody tr .cart-prev-img img {
+   width: auto;
+   height: 80px;
+}
+.footer-info__contact-value a {
+   color: #000;
+   text-decoration: none;
+   cursor: pointer;
+}
+
 @media (max-width: 767px) {
    .cart-section tbody tr {
       display: flex;

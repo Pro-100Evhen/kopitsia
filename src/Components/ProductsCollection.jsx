@@ -19,8 +19,8 @@ const ProductsCollection = () => {
             <div className="row m-0">
                <div className="col-12 p-0">
                   <div className="title-3 text-center">
-                     <h2>New Arrival</h2>
-                     <h5 className="theme-color">Our Collection</h5>
+                     <h2>Новинки</h2>
+                     <h5 className="theme-color">Наші колекції</h5>
                   </div>
                </div>
             </div>

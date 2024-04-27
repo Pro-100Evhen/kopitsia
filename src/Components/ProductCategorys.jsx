@@ -7,8 +7,8 @@ const ProductCategorys = () => {
             <div className="row">
                <div className="col-lg-12">
                   <div className="title title-2 text-center">
-                     <h2>Our Category</h2>
-                     <h5 className="text-color">Our collection</h5>
+                     <h2>Наша іграшки</h2>
+                     <h5 className="text-color">Наші колекції</h5>
                   </div>
                </div>
             </div>
@@ -16,9 +16,8 @@ const ProductCategorys = () => {
                <div className="col-xxl-2 col-lg-3">
                   <div className="category-wrap category-padding category-block theme-bg-color">
                      <div>
-                        <h2 className="light-text">Top</h2>
-                        <h2 className="top-spacing">Our Top</h2>
-                        <span>Categories</span>
+                        <h2 className="top-spacing">Найкращі</h2>
+                        <span>Категорії</span>
                      </div>
                   </div>
                </div>

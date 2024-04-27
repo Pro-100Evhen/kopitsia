@@ -25,16 +25,16 @@ const WishlistItem = ({ name, price, imageUrl, id, count }) => {
    return (
       <tr>
          <td>
-            <a href="../product/details.html">
+            <div className="cart-prev-img">
                <img
                   src={imageUrl}
                   className="blur-up lazyloaded"
                   alt="productImage"
                />
-            </a>
+            </div>
          </td>
          <td>
-            <a href="../product/details.html">{name}</a>
+            <h3>{name}</h3>
             <div className="mobile-cart-content row">
                <div className="col">
                   <div className="qty-box">
@@ -49,7 +49,7 @@ const WishlistItem = ({ name, price, imageUrl, id, count }) => {
                   </div>
                </div>
                <div className="col">
-                  <h2>${price}</h2>
+                  <h2>{price}грн</h2>
                </div>
                <div className="col">
                   <h2 className="td-color">
@@ -61,7 +61,7 @@ const WishlistItem = ({ name, price, imageUrl, id, count }) => {
             </div>
          </td>
          <td>
-            <h2>${price}</h2>
+            <h2>{price}грн</h2>
          </td>
          <td>
             <div className="qty-box">
@@ -79,7 +79,7 @@ const WishlistItem = ({ name, price, imageUrl, id, count }) => {
             </div>
          </td>
          <td>
-            <h2 className="td-color">${price * count}</h2>
+            <h2 className="td-color">{price * count}грн</h2>
          </td>
          <td>
             <div
