@@ -254,3 +254,49 @@ h3.text-capitalize.white {
 .hide-other-payment-method {
    display: none;
 }
+
+header .cart-btn .cart-total {
+   display: flex;
+   justify-content: space-between;
+}
+
+.menu-right ul {
+   margin: 0;
+}
+.onhover-dropdown.cart-dropdown.show a svg {
+   stroke: #fff;
+}
+.onhover-dropdown.cart-dropdown.show a > span {
+   color: #fff;
+}
+.onhover-dropdown.cart-dropdown.show:hover a svg {
+   stroke: #0163d2;
+}
+.onhover-dropdown.cart-dropdown.show:hover a span {
+   color: #0163d2;
+}
+.header-style-2 .main-menu .menu-right > ul > li > a {
+   color: #fff;
+}
+.header-style-2 .main-menu .menu-right > ul > li a.btn.btn-solid-default {
+   color: #fff;
+}
+.header-style-2 .main-menu .menu-right > ul > li a.btn.btn-solid-default {
+   color: #fff;
+}
+.header-style-2
+   .main-menu
+   .menu-right
+   .onhover-dropdown.cart-dropdown:hover
+   a.btn.btn-solid-default.btn-spacing.no-hover
+   span {
+   color: #fff;
+}
+.header-style-2
+   .main-menu
+   .menu-right
+   .onhover-dropdown.cart-dropdown:hover
+   a.btn.btn-solid-default.btn-spacing.no-hover
+   svg {
+   stroke: #fff;
+}

@@ -17,11 +17,15 @@ import "../assets/css/vendors/slick/slick.css";
 import "../assets/css/main.scss";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
+import LitleCartItem from "../Components/Cart/LitleCartItem";
 
 const Header = () => {
    const { totalPrice, items, withListItems } = useSelector(
       (state) => state.cart
    );
+
+   const CartItems = useSelector((state) => state.cart.items);
+
    return (
       <>
          <header className="header-style-2" id="home">
@@ -207,40 +211,9 @@ const Header = () => {
                                        </NavLink>
                                     </div>
                                  </li>
-                                 <li className="onhover-dropdown wislist-dropdown">
+                                 {/* <li className="onhover-dropdown wislist-dropdown">
                                     <div className="cart-media">
-                                       {/* <a href="cart/list.html">
-                                          <svg
-                                             xmlns="http://www.w3.org/2000/svg"
-                                             width="24"
-                                             height="24"
-                                             viewBox="0 0 24 24"
-                                             fill="none"
-                                             stroke="currentColor"
-                                             strokeWidth="2"
-                                             strokeLinecap="round"
-                                             strokeLinejoin="round"
-                                             className="feather feather-shopping-cart"
-                                          >
-                                             <circle
-                                                cx="9"
-                                                cy="21"
-                                                r="1"
-                                             ></circle>
-                                             <circle
-                                                cx="20"
-                                                cy="21"
-                                                r="1"
-                                             ></circle>
-                                             <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                                          </svg>
-                                          <span
-                                             id="cart-count"
-                                             className="label label-theme rounded-pill"
-                                          >
-                                             0
-                                          </span>
-                                       </a> */}
+                                       
                                        <NavLink
                                           className={({ isActive }) =>
                                              isActive ? "activeLink" : ""
@@ -279,7 +252,103 @@ const Header = () => {
                                           </span>
                                        </NavLink>
                                     </div>
+                                 </li> */}
+
+                                 <li className="onhover-dropdown cart-dropdown show">
+                                    <NavLink
+                                       to="/cart"
+                                       type="button"
+                                       className="btn btn-solid-default btn-spacing no-hover"
+                                    >
+                                       <svg
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          width={24}
+                                          height={24}
+                                          viewBox="0 0 24 24"
+                                          fill="none"
+                                          stroke="currentColor"
+                                          strokeWidth={2}
+                                          strokeLinecap="round"
+                                          strokeLinejoin="round"
+                                          className="feather feather-shopping-cart pe-2"
+                                       >
+                                          <circle cx={9} cy={21} r={1} />
+                                          <circle cx={20} cy={21} r={1} />
+                                          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                                       </svg>
+                                       <span>
+                                          {useSelector(
+                                             (state) => state.cart.totalPrice
+                                          )}{" "}
+                                          грн
+                                       </span>
+                                    </NavLink>
+                                    <div className="onhover-div">
+                                       <div className="cart-menu">
+                                          <div className="cart-title">
+                                             <h6>
+                                                <svg
+                                                   xmlns="http://www.w3.org/2000/svg"
+                                                   width={24}
+                                                   height={24}
+                                                   viewBox="0 0 24 24"
+                                                   fill="none"
+                                                   stroke="currentColor"
+                                                   strokeWidth={2}
+                                                   strokeLinecap="round"
+                                                   strokeLinejoin="round"
+                                                   className="feather feather-shopping-bag"
+                                                >
+                                                   <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                                                   <line
+                                                      x1={3}
+                                                      y1={6}
+                                                      x2={21}
+                                                      y2={6}
+                                                   />
+                                                   <path d="M16 10a4 4 0 0 1-8 0" />
+                                                </svg>
+                                                <span className="label label-theme rounded-pill">
+                                                   {useSelector(
+                                                      (state) =>
+                                                         state.cart.items.length
+                                                   )}
+                                                </span>
+                                             </h6>
+                                             <span className="d-md-none d-block">
+                                                <i className="fas fa-arrow-right back-cart" />
+                                             </span>
+                                          </div>
+                                          <ul className="custom-scroll">
+                                             {CartItems.map((product) => (
+                                                <LitleCartItem
+                                                   key={product.id}
+                                                   {...product}
+                                                />
+                                             ))}
+                                          </ul>
+                                       </div>
+                                       <div className="cart-btn">
+                                          <h6 className="cart-total">
+                                             <span className="font-light">
+                                                Загальна сума:
+                                             </span>{" "}
+                                             {useSelector(
+                                                (state) => state.cart.totalPrice
+                                             )}{" "}
+                                             грн
+                                          </h6>
+
+                                          <NavLink
+                                             className="btn btn-solid-default btn-block"
+                                             to="/cart"
+                                          >
+                                             Перейдіть до оплати
+                                          </NavLink>
+                                       </div>
+                                    </div>
                                  </li>
+
                                  <li className="onhover-dropdown">
                                     {/* <div className="cart-media name-usr">
                                                 <i data-feather="user"></i>

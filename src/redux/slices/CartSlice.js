@@ -40,6 +40,9 @@ const CartSlice = createSlice({
          } else if (findProduct.count > 1) {
             findProduct.count--;
          }
+         state.totalPrice = state.items.reduce((sum, item) => {
+            return item.price * item.count + sum;
+         }, 0);
       },
       minusItemInWishListCount(state, action) {
          const findProductWishList = state.withListItems.find(
@@ -52,6 +55,9 @@ const CartSlice = createSlice({
          } else if (findProductWishList.count > 1) {
             findProductWishList.count--;
          }
+         state.totalWishPrice = state.withListItems.reduce((sum, item) => {
+            return item.price * item.count + sum;
+         }, 0);
       },
       addProductToWishList(state, action) {
          const findProductInWishList = state.withListItems.find(
