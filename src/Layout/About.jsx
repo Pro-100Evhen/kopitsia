@@ -2,11 +2,12 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Breadcrumbs from "../Components/Breadcrumbs";
+import { NavLink } from "react-router-dom";
 
 const About = () => {
    return (
       <>
-         <Breadcrumbs title="About-us" />
+         <Breadcrumbs title="Про нас" />
          {/* team leader section Start */}
          <section className="overflow-hidden">
             <div className="container">
@@ -41,27 +42,32 @@ const About = () => {
                   <div className="col-xl-5">
                      <div className="about-details">
                         <div>
-                           <h2>WHO WE ARE</h2>
-                           <h3>largest Online fashion destination</h3>
+                           <h2>ХТО МИ ТАКІ</h2>
+                           <h3>Онлайн магазин плюшевих іграшок</h3>
                            <p>
-                              Lorem ipsum dolor sit amet consectetur adipisicing
-                              elit. Totam, culpa! Asperiores labore amet nemo
-                              ullam odit atque adipisci, hic, aliquid animi
-                              fugiat praesentium quidem. Perspiciatis, expedita!
+                              Відкрийте для себе світ тепла та затишку у нашому
+                              магазині плюшевих іграшок, де кожен виріб
+                              створений з любов’ю та дбайливістю. Наша історія
+                              почалася коли ми вирішили подарувати дітям та
+                              дорослим частинку радості через унікальні плюшеві
+                              друзів.
                            </p>
                            <p>
-                              Lorem ipsum dolor sit amet consectetur adipisicing
-                              elit. Totam, culpa! Asperiores labore amet nemo
-                              ullam odit atque adipisci, hic, aliquid animi
-                              fugiat praesentium quidem. Perspiciatis, expedita!
+                              У Kopitsia ми віримо, що плюшева іграшка може бути
+                              більше ніж просто граю. Вона стає справжнім
+                              другом, здатним підтримати у важкі хвилини та
+                              подарувати теплі обійми. Кожна іграшка у нашому
+                              асортименті — це результат майстерності наших
+                              ремісників, які використовують лише найкращі
+                              матеріали та дотримуються високих стандартів
+                              якості.
                            </p>
-                           <button
-                              onclick="location.href = 'shop.php';"
-                              type="button"
-                              className="btn btn-solid-default"
+                           <NavLink
+                              to="/"
+                              className="btn btn-solid-default white"
                            >
-                              Shop Now
-                           </button>
+                              Купити зараз!
+                           </NavLink>
                         </div>
                      </div>
                   </div>

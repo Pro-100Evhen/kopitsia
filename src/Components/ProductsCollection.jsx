@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { fetchProducts, selectorProducts } from "../redux/slices/ProductSlice";
 import { useDispatch, useSelector } from "react-redux";
 import ProductsPrev from "./products/ProductsPrev";
+import Sceleton from "./products/Sceleton";
 
 const ProductsCollection = () => {
    const productsSelector = useSelector(selectorProducts);
@@ -12,6 +13,12 @@ const ProductsCollection = () => {
    useEffect(() => {
       dispatch(fetchProducts());
    }, [dispatch]);
+
+   const isLoading = useSelector((state) => state.products.isLoading);
+   const skeletons = [];
+   for (let index = 0; index < 24; index++) {
+      skeletons.push(<Sceleton key={index} />);
+   }
 
    return (
       <section className="ratio_asos overflow-hidden">
@@ -26,17 +33,19 @@ const ProductsCollection = () => {
             </div>
 
             <div className="row g-sm-4 g-3">
-               {products.map((product) => (
-                  <ProductsPrev
-                     key={product.id}
-                     name={product.name}
-                     price={product.price}
-                     categories={product.categories}
-                     imageUrl={product.imageUrl}
-                     id={product.id}
-                     // В наступних спрінтах додати вниз товару обмежений опис
-                  />
-               ))}
+               {isLoading
+                  ? skeletons
+                  : products.map((product) => (
+                       <ProductsPrev
+                          key={product.id}
+                          name={product.name}
+                          price={product.price}
+                          categories={product.categories}
+                          imageUrl={product.imageUrl}
+                          id={product.id}
+                          // В наступних спрінтах додати вниз товару обмежений опис
+                       />
+                    ))}
             </div>
          </div>
       </section>

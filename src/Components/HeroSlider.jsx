@@ -176,12 +176,7 @@ const HeroSlider = () => {
                   Купуй одну, для{" "}
                   <span className="theme-color">початку колекції</span>
                </p>
-               <h2>
-                  600грн{" "}
-                  <span className="theme-color">
-                     <del>376грн</del>
-                  </span>
-               </h2>
+               <h2>600грн </h2>
                <p className="poster-details mb-0">
                   Дитячі іграшки з штучного хутра, тканини і набивного
                   матеріалів.
