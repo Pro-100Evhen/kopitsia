@@ -399,3 +399,25 @@ header .main-navbar .nav-menu.hideMenu {
       display: none;
    }
 }
+@media (max-width: 1660px) {
+   .poster-section .next {
+      right: 11% !important;
+   }
+}
+.footer-info__contact-li {
+   word-wrap: break-word;
+   flex-wrap: wrap;
+}
+footer .main-footer {
+   padding: 10px 0;
+}
+@media (max-width: 575px) {
+   .footer-sm-space {
+      margin-bottom: 10px;
+   }
+}
+@media (max-width: 797px) {
+   .poster-section .next {
+      right: 8% !important;
+   }
+}

@@ -5,7 +5,7 @@ function HeroSliderNextArrow(props) {
    const { onClick } = props;
    return (
       <div onClick={onClick} className="custom-arrow next">
-         <span>Наст</span>
+         {/* <span>Наст</span> */}
          <i className="fas fa-chevron-right ms-3"></i>
       </div>
    );
@@ -16,7 +16,7 @@ function HeroSliderPrevArrow(props) {
    return (
       <div onClick={onClick} className="custom-arrow prev">
          <i className="fas fa-chevron-left me-3"></i>
-         <span>Попер</span>
+         {/* <span>Попер</span> */}
       </div>
    );
 }
@@ -109,9 +109,6 @@ const HeroSlider = () => {
                      className="img-fluid blur-up lazyload"
                      alt=""
                   />
-                  <div className="overlay-color">
-                     <i className="fas fa-plus theme-color"></i>
-                  </div>
                </div>
             </div>
             <div>
@@ -121,9 +118,6 @@ const HeroSlider = () => {
                      className="img-fluid blur-up lazyload"
                      alt=""
                   />
-                  <div className="overlay-color">
-                     <i className="fas fa-plus theme-color"></i>
-                  </div>
                </div>
             </div>
             <div>
@@ -133,9 +127,6 @@ const HeroSlider = () => {
                      className="img-fluid blur-up lazyload"
                      alt=""
                   />
-                  <div className="overlay-color">
-                     <i className="fas fa-plus theme-color"></i>
-                  </div>
                </div>
             </div>
             <div>
@@ -145,9 +136,6 @@ const HeroSlider = () => {
                      className="img-fluid blur-up lazyload"
                      alt=""
                   />
-                  <div className="overlay-color">
-                     <i className="fas fa-plus theme-color"></i>
-                  </div>
                </div>
             </div>
             <div>
@@ -157,9 +145,6 @@ const HeroSlider = () => {
                      className="img-fluid blur-up lazyload"
                      alt=""
                   />
-                  <div className="overlay-color">
-                     <i className="fas fa-plus theme-color"></i>
-                  </div>
                </div>
             </div>
          </Slider>

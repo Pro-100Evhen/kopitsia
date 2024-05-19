@@ -69,7 +69,7 @@ const Footer = () => {
                            </span>
                            <span className="footer-info__contact-value">
                               <a href="https://www.linkedin.com/in/yevhen-nazarenko-b2b731266/">
-                                 https://www.linkedin.com/in/yevhen-nazarenko-b2b731266/
+                                 https://www.linkedin.com
                               </a>
                            </span>
                         </li>
@@ -80,7 +80,7 @@ const Footer = () => {
                            </span>
                            <span className="footer-info__contact-value">
                               <a href="https://freelancehunt.com/freelancer/Yevhen1215.html">
-                                 https://freelancehunt.com/freelancer/Yevhen1215.html
+                                 https://freelancehunt.com
                               </a>
                            </span>
                         </li>

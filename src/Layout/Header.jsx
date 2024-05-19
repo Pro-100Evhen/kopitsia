@@ -89,26 +89,18 @@ const Header = () => {
                                              Головна
                                           </NavLink>
                                        </li>
+
                                        <li>
                                           <NavLink
                                              className={({ isActive }) =>
                                                 isActive ? "activeLink" : ""
                                              }
-                                             to="/cart"
+                                             to="/shop"
                                           >
-                                             Кошик
+                                             Магазин
                                           </NavLink>
                                        </li>
-                                       <li>
-                                          <NavLink
-                                             className={({ isActive }) =>
-                                                isActive ? "activeLink" : ""
-                                             }
-                                             to="/checkout"
-                                          >
-                                             Оформлення замовлення
-                                          </NavLink>
-                                       </li>
+
                                        <li>
                                           <NavLink
                                              className={({ isActive }) =>
@@ -119,17 +111,19 @@ const Header = () => {
                                              Про нас
                                           </NavLink>
                                        </li>
+
                                        <li>
                                           <NavLink
                                              className={({ isActive }) =>
                                                 isActive ? "activeLink" : ""
                                              }
-                                             to="/thankyou"
+                                             to="/categorys"
                                           >
-                                             Дякую за покупку
+                                             Категорії
                                           </NavLink>
                                        </li>
-                                       <li>
+
+                                       {/* <li>
                                           <NavLink
                                              className={({ isActive }) =>
                                                 isActive ? "activeLink" : ""
@@ -138,7 +132,7 @@ const Header = () => {
                                           >
                                              Список бажань
                                           </NavLink>
-                                       </li>
+                                       </li> */}
                                     </ul>
                                  </div>
                               </div>

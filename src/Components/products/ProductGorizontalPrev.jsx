@@ -65,8 +65,8 @@ const ProductGorizontalPrev = (props) => {
             </div>
             <div className="product-details">
                <div>
-                  <h6 className="font-light">{props.name}</h6>
-                  <h3>{props.category}</h3>
+                  <h6 className="font-light">{props.category}</h6>
+                  <h3>{props.name}</h3>
                   <h4 className="font-light mt-1">
                      {/* <del>$49.00</del>{" "} */}
                      <span className="theme-color">{props.price} грн</span>

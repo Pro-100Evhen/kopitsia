@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import ProductsPrev from "./products/ProductsPrev";
 import Sceleton from "./products/Sceleton";
 
-const ProductsCollection = () => {
+const ProductsCollection = (props) => {
    const productsSelector = useSelector(selectorProducts);
    const products = productsSelector.products;
 
@@ -26,8 +26,8 @@ const ProductsCollection = () => {
             <div className="row m-0">
                <div className="col-12 p-0">
                   <div className="title-3 text-center">
-                     <h2>Новинки</h2>
-                     <h5 className="theme-color">Наші колекції</h5>
+                     <h5 className="theme-color">{props.title}</h5>
+                     <h2>{props.subTitle}</h2>
                   </div>
                </div>
             </div>

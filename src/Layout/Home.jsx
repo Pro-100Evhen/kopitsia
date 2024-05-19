@@ -17,13 +17,13 @@ function Home() {
          {/* Банери категорій продуктів, створяться після підключення redux */}
          {/* <Baners /> */}
 
-         <ProductsCollection />
+         <ProductsCollection title="М'які іграшки" subTitle="Саме для вас" />
 
          {/* Слайдер категорій продуктів, поки не роблю нема куди виводити, 
          піде в 2/3 спрінт */}
          {/* <ProductCategorys /> */}
 
-         <TopProductColumn />
+         {/* <TopProductColumn /> */}
 
          {/* Зарез треба додати слайдер */}
          {/* <ClassicSlider /> */}

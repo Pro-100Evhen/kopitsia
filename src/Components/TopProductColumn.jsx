@@ -22,6 +22,21 @@ const TopProductColumn = () => {
                      subTitle={"Те що треба для обіймів"}
                      categories={"М'які іграшки"}
                   />
+                  <ProductTopColumn
+                     title={"Крісла подушки"}
+                     subTitle={"Не банально поседіти вдома"}
+                     categories={"крісла_подушки"}
+                  />
+                  <ProductTopColumn
+                     title={"Все буде Україна"}
+                     subTitle={"Патріотична лінійка"}
+                     categories={"все_буде_україна"}
+                  />
+                  <ProductTopColumn
+                     title={"Подушки"}
+                     subTitle={"Оригінальний підхід до сну"}
+                     categories={"Подушки"}
+                  />
                </div>
             </div>
          </div>

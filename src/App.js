@@ -8,6 +8,8 @@ import MainHFTemplate from "./Layout/MainHFTemplate";
 import Wishlist from "./Layout/WishList";
 import CheckOut from "./Layout/CheckOut";
 import ThankYou from "./Layout/ThankYou";
+import CategoryPage from "./Layout/CategoryPage";
+import ShopPage from "./Layout/ShopPage";
 
 function App() {
    return (
@@ -20,6 +22,8 @@ function App() {
                <Route path="wishlist" element={<Wishlist />} />
                <Route path="checkout" element={<CheckOut />} />
                <Route path="thankyou" element={<ThankYou />} />
+               <Route path="categorys" element={<CategoryPage />} />
+               <Route path="shop" element={<ShopPage />} />
                <Route path="*" element={<NotFound />} />
             </Route>
          </Routes>
