@@ -1,13 +1,26 @@
 import React from "react";
 import Breadcrumbs from "../Components/Breadcrumbs";
 import { useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
 
 const CheckOut = () => {
    const showCartParams = () => {
       const cartParamsBlock = document
          .querySelector(".cart-pay-deteils")
          .classList.toggle("hide-other-payment-method");
+   };
+
+   const {
+      register,
+      handleSubmit,
+      formState: { errors },
+   } = useForm();
+
+   const navigate = useNavigate();
+
+   const onSubmit = () => {
+      navigate("/thankyou");
    };
 
    return (
@@ -23,6 +36,7 @@ const CheckOut = () => {
                         className="needs-validation"
                         method="POST"
                         action="place-order"
+                        onSubmit={handleSubmit(onSubmit)}
                      >
                         <input
                            type="hidden"
@@ -41,7 +55,23 @@ const CheckOut = () => {
                                  id="name"
                                  name="name"
                                  placeholder="Введіть повне ім'я"
+                                 {...register("firstName", {
+                                    required: "Значення імені обов'язкове!",
+                                    minLength: {
+                                       value: 3,
+                                       message:
+                                          "Ім'я має мати мінімум 3 символи",
+                                    },
+                                 })}
                               />
+                              <div>
+                                 {errors?.firstName && (
+                                    <p className="formErrorMessage">
+                                       {errors?.firstName?.message ||
+                                          `Введіть значення імені`}
+                                    </p>
+                                 )}
+                              </div>
                            </div>
                            <div className="col-md-6">
                               <label htmlFor="phone" className="form-label">
@@ -53,31 +83,82 @@ const CheckOut = () => {
                                  id="phone"
                                  name="phone"
                                  placeholder="Введіть номер телефону"
+                                 {...register("phone", {
+                                    required: "Значення телефону обов'язкове!",
+                                    minLength: {
+                                       value: 9,
+                                       message: "Ім'я має мати бути з 10 цифр",
+                                    },
+                                    maxLength: {
+                                       value: 11,
+                                       message: "Ім'я має мати бути з 10 цифр",
+                                    },
+                                 })}
                               />
+                              <div>
+                                 {errors?.phone && (
+                                    <p className="formErrorMessage">
+                                       {errors?.phone?.message ||
+                                          `Введіть значення телефону`}
+                                    </p>
+                                 )}
+                              </div>
                            </div>
                            <div className="col-md-6">
                               <label htmlFor="locality" className="form-label">
-                                 Місцевість
+                                 Прізвище
                               </label>
                               <input
                                  type="text"
                                  className="form-control"
                                  id="locality"
                                  name="locality"
-                                 placeholder="Місцевість"
+                                 placeholder="Прізвище"
+                                 {...register("secondName", {
+                                    required: "Значення прізвища обов'язкове!",
+                                    minLength: {
+                                       value: 3,
+                                       message:
+                                          "Прізвище має мати мінімум 3 символи",
+                                    },
+                                 })}
                               />
+                              <div>
+                                 {errors?.secondName && (
+                                    <p className="formErrorMessage">
+                                       {errors?.secondName?.message ||
+                                          `Введіть значення прізвища`}
+                                    </p>
+                                 )}
+                              </div>
                            </div>
                            <div className="col-md-6">
                               <label htmlFor="landmark" className="form-label">
-                                 Орієнтир
+                                 Zip code
                               </label>
                               <input
                                  type="text"
                                  className="form-control"
                                  id="landmark"
                                  name="landmark"
-                                 placeholder="Орієнтир"
+                                 placeholder="123456"
+                                 {...register("zip", {
+                                    required: "Значення zip коду обов'язкове!",
+                                    minLength: {
+                                       value: 4,
+                                       message:
+                                          "Zip code має мати бути мінімум з 5 цифр",
+                                    },
+                                 })}
                               />
+                              <div>
+                                 {errors?.zip && (
+                                    <p className="formErrorMessage">
+                                       {errors?.zip?.message ||
+                                          `Введіть значення zip коду`}
+                                    </p>
+                                 )}
+                              </div>
                            </div>
                            <div className="col-md-12">
                               <label htmlFor="address" className="form-label">
@@ -88,19 +169,18 @@ const CheckOut = () => {
                                  id="address"
                                  name="address"
                                  defaultValue={""}
+                                 {...register("adress", {
+                                    required: "Значення адреси  обов'язкове!",
+                                 })}
                               />
-                           </div>
-                           <div className="col-md-3">
-                              <label htmlFor="city" className="form-label">
-                                 Місто
-                              </label>
-                              <input
-                                 type="text"
-                                 className="form-control"
-                                 id="city"
-                                 name="city"
-                                 placeholder="Місто"
-                              />
+                              <div>
+                                 {errors?.adress && (
+                                    <p className="formErrorMessage">
+                                       {errors?.adress?.message ||
+                                          `Введіть значення адреси`}
+                                    </p>
+                                 )}
+                              </div>
                            </div>
                            {/* <div className="col-md-3">
                               <label htmlFor="country" className="form-label">
@@ -177,18 +257,7 @@ const CheckOut = () => {
                                  </option>
                               </select>
                            </div> */}
-                           <div className="col-md-3">
-                              <label htmlFor="zip" className="form-label">
-                                 Zip
-                              </label>
-                              <input
-                                 type="text"
-                                 className="form-control"
-                                 id="zip"
-                                 name="zip"
-                                 placeholder={123456}
-                              />
-                           </div>
+
                            {/* <div
                               className="col-md-12 form-check ps-0 mt-3 custome-form-check"
                               style={{ paddingLeft: "15px !important" }}
@@ -464,18 +533,18 @@ const CheckOut = () => {
                               />
                            </div>
                         </div>
-                        {/* <button
+                        <button
                            className="btn btn-solid-default mt-4 white"
                            type="submit"
                         >
                            Оформити замовлення
-                        </button> */}
-                        <NavLink
+                        </button>
+                        {/* <NavLink
                            to="/thankyou"
                            className="btn btn-solid-default mt-4 white"
                         >
                            Оформити замовлення
-                        </NavLink>
+                        </NavLink> */}
                      </form>
                   </div>
                   <div className="col-lg-4">
