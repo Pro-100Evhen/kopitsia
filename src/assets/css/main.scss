@@ -426,3 +426,17 @@ footer .main-footer {
    line-height: 1.5;
    color: red;
 }
+
+.cart-section tbody tr td {
+   min-width: 90px;
+}
+.cart-section .double-row .col-md-12 {
+   flex: 1 1 70%;
+}
+.cart-section .double-row .cart-checkout-section {
+   flex: 1 1 30%;
+}
+.cart-section .double-row .cart-checkout-section .col-lg-4 {
+   width: 100%;
+   margin: 0;
+}

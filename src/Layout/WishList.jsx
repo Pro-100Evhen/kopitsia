@@ -30,6 +30,7 @@ const Wishlist = () => {
                                  <th scope="col">Ціна</th>
                                  <th scope="col">Кількість</th>
                                  <th scope="col">ПІдсумок</th>
+                                 <th scope="col">Додати в кошик</th>
                                  <th scope="col">Видалити</th>
                               </tr>
                            </thead>

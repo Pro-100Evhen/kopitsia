@@ -34,9 +34,9 @@ const CartSlice = createSlice({
             (product) => product.id === action.payload.id
          );
          if (findProduct.count === 1) {
-            state.items = state.items.filter(
-               (product) => product.id !== action.payload.id
-            );
+            // state.items = state.items.filter(
+            //    (product) => product.id !== action.payload.id
+            // );
          } else if (findProduct.count > 1) {
             findProduct.count--;
          }
@@ -49,9 +49,9 @@ const CartSlice = createSlice({
             (product) => product.id === action.payload.id
          );
          if (findProductWishList.count === 1) {
-            state.withListItems = state.withListItems.filter(
-               (product) => product.id !== action.payload.id
-            );
+            // state.withListItems = state.withListItems.filter(
+            //    (product) => product.id !== action.payload.id
+            // );
          } else if (findProductWishList.count > 1) {
             findProductWishList.count--;
          }

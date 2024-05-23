@@ -2,12 +2,16 @@ import React from "react";
 import { useDispatch } from "react-redux";
 
 import {
+   addProductToCart,
    addProductToWishList,
    minusItemInWishListCount,
    remoweProductFromWithList,
 } from "../../redux/slices/CartSlice";
 
-const WishlistItem = ({ name, price, imageUrl, id, count }) => {
+import { BsCartCheck } from "react-icons/bs";
+import { toast } from "react-toastify";
+
+const WishlistItem = ({ name, price, imageUrl, id, count, categories }) => {
    const dispatch = useDispatch();
    const handleQuantityChange = (event) => {
       const newCount = parseInt(event.target.value, 10);
@@ -21,6 +25,19 @@ const WishlistItem = ({ name, price, imageUrl, id, count }) => {
 
    const remoweProductFromWishListHendler = () => {
       dispatch(remoweProductFromWithList({ id }));
+   };
+   const addToCardFromWithListHendler = () => {
+      const item = {
+         imageUrl,
+         categories,
+         name,
+         price,
+         id,
+      };
+
+      dispatch(addProductToCart(item));
+      toast.success(`${name} успішно доданий до списку бажань`);
+      remoweProductFromWishListHendler();
    };
    return (
       <tr>
@@ -80,6 +97,14 @@ const WishlistItem = ({ name, price, imageUrl, id, count }) => {
          </td>
          <td>
             <h2 className="td-color">{price * count}грн</h2>
+         </td>
+         <td>
+            <div
+               className="remowe-product-from-cart"
+               onClick={addToCardFromWithListHendler}
+            >
+               <BsCartCheck />
+            </div>
          </td>
          <td>
             <div
