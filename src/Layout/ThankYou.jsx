@@ -59,13 +59,11 @@ const ThankYou = () => {
                            <tbody>
                               <tr className="table-order">
                                  <td>
-                                    <a href="javascript:void(0)">
                                        <img
                                           src="assets/images/fashion/product/front/1.jpg"
                                           className="img-fluid blur-up lazyload"
                                           alt
                                        />
-                                    </a>
                                  </td>
                                  <td>
                                     <p>Product Name</p>
@@ -82,13 +80,11 @@ const ThankYou = () => {
                               </tr>
                               <tr className="table-order">
                                  <td>
-                                    <a href="javascript:void(0)">
-                                       <img
-                                          src="assets/images/fashion/product/front/2.jpg"
-                                          className="img-fluid blur-up lazyload"
-                                          alt
-                                       />
-                                    </a>
+                                    <img
+                                       src="assets/images/fashion/product/front/2.jpg"
+                                       className="img-fluid blur-up lazyload"
+                                       alt
+                                    />
                                  </td>
                                  <td>
                                     <p className="font-light">Product Name</p>
@@ -105,13 +101,11 @@ const ThankYou = () => {
                               </tr>
                               <tr className="table-order">
                                  <td>
-                                    <a href="javascript:void(0)">
                                        <img
                                           src="assets/images/fashion/product/front/3.jpg"
                                           className="img-fluid blur-up lazyload"
                                           alt
                                        />
-                                    </a>
                                  </td>
                                  <td>
                                     <p className="font-light">Product Name</p>

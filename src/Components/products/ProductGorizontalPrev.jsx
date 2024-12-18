@@ -80,7 +80,6 @@ const ProductGorizontalPrev = (props) => {
                            title="Buy"
                         >
                            <a
-                              href="javascript:void(0)"
                               className="addtocart-btn"
                               data-bs-toggle="modal"
                               data-bs-target="#addtocart"
@@ -110,7 +109,6 @@ const ProductGorizontalPrev = (props) => {
                            title="Quick View"
                         >
                            <a
-                              href="javascript:void(0)"
                               data-bs-toggle="modal"
                               data-bs-target="#quick-view"
                            >

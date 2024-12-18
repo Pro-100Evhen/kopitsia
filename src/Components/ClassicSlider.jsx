@@ -32,7 +32,6 @@ const ClassicSlider = () => {
                               <ul>
                                  <li>
                                     <a
-                                       href="javascript:void(0)"
                                        className="addtocart-btn"
                                        data-bs-toggle="modal"
                                        data-bs-target="#addtocart"
@@ -61,7 +60,6 @@ const ClassicSlider = () => {
                                  </li>
                                  <li>
                                     <a
-                                       href="javascript:void(0)"
                                        data-bs-toggle="modal"
                                        data-bs-target="#quick-view"
                                     >
@@ -163,7 +161,6 @@ const ClassicSlider = () => {
                               <ul>
                                  <li>
                                     <a
-                                       href="javascript:void(0)"
                                        className="addtocart-btn"
                                        data-bs-toggle="modal"
                                        data-bs-target="#addtocart"
@@ -192,7 +189,6 @@ const ClassicSlider = () => {
                                  </li>
                                  <li>
                                     <a
-                                       href="javascript:void(0)"
                                        data-bs-toggle="modal"
                                        data-bs-target="#quick-view"
                                     >
@@ -294,7 +290,6 @@ const ClassicSlider = () => {
                               <ul>
                                  <li>
                                     <a
-                                       href="javascript:void(0)"
                                        className="addtocart-btn"
                                        data-bs-toggle="modal"
                                        data-bs-target="#addtocart"
@@ -323,7 +318,6 @@ const ClassicSlider = () => {
                                  </li>
                                  <li>
                                     <a
-                                       href="javascript:void(0)"
                                        data-bs-toggle="modal"
                                        data-bs-target="#quick-view"
                                     >
@@ -425,7 +419,6 @@ const ClassicSlider = () => {
                               <ul>
                                  <li>
                                     <a
-                                       href="javascript:void(0)"
                                        className="addtocart-btn"
                                        data-bs-toggle="modal"
                                        data-bs-target="#addtocart"
@@ -454,7 +447,6 @@ const ClassicSlider = () => {
                                  </li>
                                  <li>
                                     <a
-                                       href="javascript:void(0)"
                                        data-bs-toggle="modal"
                                        data-bs-target="#quick-view"
                                     >
@@ -556,7 +548,6 @@ const ClassicSlider = () => {
                               <ul>
                                  <li>
                                     <a
-                                       href="javascript:void(0)"
                                        className="addtocart-btn"
                                        data-bs-toggle="modal"
                                        data-bs-target="#addtocart"
@@ -585,7 +576,6 @@ const ClassicSlider = () => {
                                  </li>
                                  <li>
                                     <a
-                                       href="javascript:void(0)"
                                        data-bs-toggle="modal"
                                        data-bs-target="#quick-view"
                                     >
@@ -687,7 +677,6 @@ const ClassicSlider = () => {
                               <ul>
                                  <li>
                                     <a
-                                       href="javascript:void(0)"
                                        className="addtocart-btn"
                                        data-bs-toggle="modal"
                                        data-bs-target="#addtocart"
@@ -716,7 +705,6 @@ const ClassicSlider = () => {
                                  </li>
                                  <li>
                                     <a
-                                       href="javascript:void(0)"
                                        data-bs-toggle="modal"
                                        data-bs-target="#quick-view"
                                     >
@@ -818,7 +806,6 @@ const ClassicSlider = () => {
                               <ul>
                                  <li>
                                     <a
-                                       href="javascript:void(0)"
                                        className="addtocart-btn"
                                        data-bs-toggle="modal"
                                        data-bs-target="#addtocart"
@@ -847,7 +834,6 @@ const ClassicSlider = () => {
                                  </li>
                                  <li>
                                     <a
-                                       href="javascript:void(0)"
                                        data-bs-toggle="modal"
                                        data-bs-target="#quick-view"
                                     >
@@ -949,7 +935,6 @@ const ClassicSlider = () => {
                               <ul>
                                  <li>
                                     <a
-                                       href="javascript:void(0)"
                                        className="addtocart-btn"
                                        data-bs-toggle="modal"
                                        data-bs-target="#addtocart"
@@ -978,7 +963,6 @@ const ClassicSlider = () => {
                                  </li>
                                  <li>
                                     <a
-                                       href="javascript:void(0)"
                                        data-bs-toggle="modal"
                                        data-bs-target="#quick-view"
                                     >

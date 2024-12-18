@@ -53,9 +53,7 @@ const CartItem = ({ name, price, imageUrl, id, count }) => {
                </div>
                <div className="col">
                   <h2 className="td-color">
-                     <a href="javascript:void(0)">
-                        <i className="fas fa-times" />
-                     </a>
+                     <i className="fas fa-times" />
                   </h2>
                </div>
             </div>
@@ -72,7 +70,6 @@ const CartItem = ({ name, price, imageUrl, id, count }) => {
                      name="quantity"
                      data-rowid="ba02b0dddb000b25445168300c65386d"
                      className="form-control input-number"
-                     defaultValue={count}
                      value={count}
                   />
                </div>

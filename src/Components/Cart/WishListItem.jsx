@@ -70,9 +70,7 @@ const WishlistItem = ({ name, price, imageUrl, id, count, categories }) => {
                </div>
                <div className="col">
                   <h2 className="td-color">
-                     <a href="javascript:void(0)">
-                        <i className="fas fa-times" />
-                     </a>
+                     <i className="fas fa-times" />
                   </h2>
                </div>
             </div>

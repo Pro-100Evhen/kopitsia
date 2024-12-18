@@ -101,12 +101,6 @@ const Cart = () => {
                   <div className="row">
                      <div className="col-sm-7 col-5 order-1">
                         <div className="left-side-button text-end d-flex d-block justify-content-end">
-                           {/* <a
-                                 href="javascript:void(0)"
-                                 className="text-decoration-underline theme-color d-block text-capitalize"
-                              >
-                                 clear all items
-                              </a> */}
                            <div
                               onClick={clearCartHandler}
                               className=" theme-color d-block text-capitalize clear-cart-btn"
