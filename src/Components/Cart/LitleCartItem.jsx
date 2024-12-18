@@ -22,7 +22,7 @@ const LitleCartItem = (props) => {
             <img
                src={props.imageUrl}
                className="img-fluid blur-up lazyloaded"
-               alt
+               alt="product"
             />
             <div className="media-body">
                <h6>{props.name}</h6>
@@ -34,7 +34,7 @@ const LitleCartItem = (props) => {
                         onChange={handleQuantityChange}
                         className="form-control"
                         value={props.count}
-                        defaultValue={props.count}
+                        // defaultValue={props.count}
                      />
                   </span>
                </div>

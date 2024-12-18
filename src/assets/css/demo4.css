@@ -3250,7 +3250,7 @@ span {
      header css start
 ==========================**/
 .container-fluid-lg {
-   padding: 0 112px;
+   padding: 0 90px;
 }
 @media (max-width: 1460px) {
    .container-fluid-lg {
@@ -19311,4 +19311,8 @@ hr {
    .container {
       max-width: 1400px;
    }
+}
+
+footer .footer-info__conteiner {
+   padding: 0;
 }

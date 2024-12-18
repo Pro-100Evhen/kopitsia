@@ -18,14 +18,14 @@ const About = () => {
                            <img
                               src="assets/images/inner-page/review-image/6.jpg"
                               className="img-fluid rounded-3 about-image"
-                              alt
+                              alt="out table"
                            />
                         </div>
                         <div className="col-md-6">
                            <img
                               src="assets/images/inner-page/review-image/7.jpg"
                               className="img-fluid rounded-3 about-image"
-                              alt
+                              alt="we working"
                            />
                         </div>
                         <div className="col-12 ratio_40">
@@ -33,7 +33,7 @@ const About = () => {
                               <img
                                  src="assets/images/inner-page/review-image/8.jpg"
                                  className="img-fluid rounded-3 team-image bg-img"
-                                 alt
+                                 alt="about us all of us"
                               />
                            </div>
                         </div>
