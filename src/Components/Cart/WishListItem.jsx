@@ -87,7 +87,6 @@ const WishlistItem = ({ name, price, imageUrl, id, count, categories }) => {
                      name="quantity"
                      data-rowid="ba02b0dddb000b25445168300c65386d"
                      className="form-control input-number"
-                     defaultValue={count}
                      value={count}
                   />
                </div>
