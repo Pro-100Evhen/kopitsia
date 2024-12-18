@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
 import Baners from "./Components/Baners";
 import Home from "./Layout/Home";
 import About from "./Layout/About";
