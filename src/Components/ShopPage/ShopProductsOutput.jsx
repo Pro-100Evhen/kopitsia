@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import ProductsPrev from "../products/ProductsPrev";
 import Sceleton from "../products/Sceleton";
 import ShopOutputOption from "./ShopOutputOption";
+import { setCurrentPage } from "../../redux/slices/ShopFilters";
 
 const ShopProductsOutput = (props) => {
    const productsSelector = useSelector(selectorProducts);
@@ -29,6 +30,23 @@ const ShopProductsOutput = (props) => {
    );
 
    const productsWrapperClasses = `row g-sm-4 g-3 row-cols-lg-${productsPerRow} row-cols-md-3 row-cols-2 mt-1 custom-gy-5 product-style-2 ratio_asos product-list-section`;
+   const { currentPage, productsPerPage } = useSelector(
+      (state) => state.shopFilters
+   );
+
+   const indexOfLastProduct = currentPage * productsPerPage;
+   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+   const currentProductsToOutPut = products.slice(
+      indexOfFirstProduct,
+      indexOfLastProduct
+   );
+
+   const totalPages = Math.ceil(products.length / productsPerPage);
+   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
+
+   const chagePage = (page) => {
+      dispatch(setCurrentPage(page));
+   };
 
    return (
       <div className="category-product col-lg-9 col-12 ratio_30">
@@ -45,7 +63,7 @@ const ShopProductsOutput = (props) => {
          <div className={productsWrapperClasses}>
             {isLoading
                ? skeletons
-               : products.map((product) => (
+               : currentProductsToOutPut.map((product) => (
                     <ProductsPrev
                        key={product.id}
                        name={product.name}
@@ -59,33 +77,48 @@ const ShopProductsOutput = (props) => {
          </div>
          <nav className="page-section">
             <ul className="pagination">
-               <li className="page-item">
+               <li
+                  className={`page-item ${currentPage === 1 ? "disabled" : ""}`}
+               >
                   <a
                      className="page-link"
                      href="javascript:void(0)"
                      aria-label="Previous"
-                     style={{ color: "#6c757d" }}
+                     onClick={() => chagePage(currentPage - 1)}
                   >
                      <span aria-hidden="true">
                         <i className="fas fa-chevron-left" />
                      </span>
                   </a>
                </li>
-               <li className="page-item active">
-                  <a className="page-link" href="javascript:void(0)">
-                     1
-                  </a>
-               </li>
-               <li className="page-item">
-                  <a className="page-link" href="shop-1.html?page=2">
-                     2
-                  </a>
-               </li>
-               <li className="page-item">
+
+               {pages.map((page) => (
+                  <li
+                     key={page}
+                     className={`page-item ${
+                        currentPage === page ? "active" : ""
+                     }`}
+                  >
+                     <a
+                        className="page-link"
+                        href="javascript:void(0)"
+                        onClick={() => chagePage(page)}
+                     >
+                        {page}
+                     </a>
+                  </li>
+               ))}
+
+               <li
+                  className={`page-item ${
+                     currentPage === totalPages ? "disabled" : ""
+                  }`}
+               >
                   <a
-                     href="shop-1.html?page=2"
+                     href="javascript:void(0)"
                      className="page-link"
                      aria-label="Next"
+                     onClick={() => chagePage(currentPage + 1)}
                   >
                      <span aria-hidden="true">
                         <i className="fas fa-chevron-right" />

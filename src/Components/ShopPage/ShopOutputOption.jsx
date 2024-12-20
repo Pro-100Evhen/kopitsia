@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setProductsPerRow } from "../../redux/slices/ShopFilters";
+import { setProductsPerPage } from "../../redux/slices/ShopFilters";
 
 const ShopOutputOption = () => {
-   const [activeValue, setActiveValue] = useState(4); // Початкове значення (4)
+   const [activeValue, setActiveValue] = useState(4);
    const dispatch = useDispatch();
 
    const setPerRowValue = (valuePerRow, event) => {
@@ -27,6 +28,10 @@ const ShopOutputOption = () => {
       { value: 1, img: "list.svg", className: "list-btn" },
    ];
 
+   const changeProductsPerPageHeandler = (event) => {
+      dispatch(setProductsPerPage(event.target.value));
+   };
+
    return (
       <div className="col-12">
          <div className="filter-options">
@@ -49,7 +54,12 @@ const ShopOutputOption = () => {
                   </div>
                </div>
                <div className="dropdown select-featured">
-                  <select className="form-select" name="size" id="pagesize">
+                  <select
+                     className="form-select"
+                     name="size"
+                     id="pagesize"
+                     onChange={(event) => changeProductsPerPageHeandler(event)}
+                  >
                      <option value={12} selected>
                         12 Products Per Page
                      </option>
@@ -80,23 +90,6 @@ const ShopOutputOption = () => {
                         </a>
                      </li>
                   ))}
-               </ul>
-
-               <ul className="d-flex">
-                  {[2, 3, 4, 1].map((value) => {
-                     <li className="two-grid">
-                        <a
-                           href="javascript:void(0)"
-                           onClick={(event) => setPerRowValue(2, event)}
-                        >
-                           <img
-                              src="assets/svg/grid-2.svg"
-                              className="img-fluid blur-up lazyload"
-                              alt
-                           />
-                        </a>
-                     </li>;
-                  })}
                </ul>
             </div>
          </div>

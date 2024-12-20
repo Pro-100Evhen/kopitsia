@@ -440,3 +440,13 @@ footer .main-footer {
    width: 100%;
    margin: 0;
 }
+
+.page-section .pagination .page-item.disabled .page-link {
+   color: #6c757d;
+}
+.page-section .pagination .page-item.active .page-link {
+   background-color: #0163d2;
+}
+.page-section .pagination .page-item.active .page-link:hover {
+   color: #fff;
+}
