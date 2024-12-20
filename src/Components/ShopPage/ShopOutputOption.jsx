@@ -1,6 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { setProductsPerRow } from "../../redux/slices/ShopFilters";
 
 const ShopOutputOption = () => {
+   const [activeValue, setActiveValue] = useState(4); // Початкове значення (4)
+   const dispatch = useDispatch();
+
+   const setPerRowValue = (valuePerRow, event) => {
+      dispatch(setProductsPerRow(valuePerRow));
+
+      setActiveValue(valuePerRow);
+   };
+
+   const gridOptions = [
+      { value: 2, img: "grid-2.svg", className: "two-grid" },
+      {
+         value: 3,
+         img: "grid-3.svg",
+         className: "three-grid d-md-inline-block d-none",
+      },
+      {
+         value: 4,
+         img: "grid.svg",
+         className: "grid-btn d-lg-inline-block d-none",
+      },
+      { value: 1, img: "list.svg", className: "list-btn" },
+   ];
+
    return (
       <div className="col-12">
          <div className="filter-options">
@@ -35,42 +61,42 @@ const ShopOutputOption = () => {
             </div>
             <div className="grid-options d-sm-inline-block d-none">
                <ul className="d-flex">
-                  <li className="two-grid">
-                     <a href="javascript:void(0)">
-                        <img
-                           src="assets/svg/grid-2.svg"
-                           className="img-fluid blur-up lazyload"
-                           alt
-                        />
-                     </a>
-                  </li>
-                  <li className="three-grid d-md-inline-block d-none">
-                     <a href="javascript:void(0)">
-                        <img
-                           src="assets/svg/grid-3.svg"
-                           className="img-fluid blur-up lazyload"
-                           alt
-                        />
-                     </a>
-                  </li>
-                  <li className="grid-btn active d-lg-inline-block d-none">
-                     <a href="javascript:void(0)">
-                        <img
-                           src="assets/svg/grid.svg"
-                           className="img-fluid blur-up lazyload"
-                           alt
-                        />
-                     </a>
-                  </li>
-                  <li className="list-btn">
-                     <a href="javascript:void(0)">
-                        <img
-                           src="assets/svg/list.svg"
-                           className="img-fluid blur-up lazyload"
-                           alt
-                        />
-                     </a>
-                  </li>
+                  {gridOptions.map((option) => (
+                     <li
+                        key={option.value}
+                        className={`${option.className} ${
+                           activeValue === option.value ? "active" : ""
+                        }`}
+                     >
+                        <a
+                           href="javascript:void(0)"
+                           onClick={() => setPerRowValue(option.value)}
+                        >
+                           <img
+                              src={`assets/svg/${option.img}`}
+                              className="img-fluid blur-up lazyload"
+                              alt={`Grid ${option.value}`}
+                           />
+                        </a>
+                     </li>
+                  ))}
+               </ul>
+
+               <ul className="d-flex">
+                  {[2, 3, 4, 1].map((value) => {
+                     <li className="two-grid">
+                        <a
+                           href="javascript:void(0)"
+                           onClick={(event) => setPerRowValue(2, event)}
+                        >
+                           <img
+                              src="assets/svg/grid-2.svg"
+                              className="img-fluid blur-up lazyload"
+                              alt
+                           />
+                        </a>
+                     </li>;
+                  })}
                </ul>
             </div>
          </div>

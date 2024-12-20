@@ -14,10 +14,12 @@ import persistStore from "redux-persist/es/persistStore";
 
 import ProductSlice from "./slices/ProductSlice";
 import CartSlice from "./slices/CartSlice";
+import ShopFilters from "./slices/ShopFilters";
 
 const rootReducer = combineReducers({
    products: ProductSlice,
    cart: CartSlice,
+   shopFilters: ShopFilters,
 });
 
 const persistConfig = {

@@ -23,6 +23,13 @@ const ShopProductsOutput = (props) => {
    for (let index = 0; index < 24; index++) {
       skeletons.push(<Sceleton key={index} />);
    }
+
+   const productsPerRow = useSelector(
+      (state) => state.shopFilters.productsPerRow
+   );
+
+   const productsWrapperClasses = `row g-sm-4 g-3 row-cols-lg-${productsPerRow} row-cols-md-3 row-cols-2 mt-1 custom-gy-5 product-style-2 ratio_asos product-list-section`;
+
    return (
       <div className="category-product col-lg-9 col-12 ratio_30">
          <div className="row g-4">
@@ -35,7 +42,7 @@ const ShopProductsOutput = (props) => {
          </div>
          {/* label and featured section */}
          {/* Prodcut setion */}
-         <div className="row g-sm-4 g-3 row-cols-lg-4 row-cols-md-3 row-cols-2 mt-1 custom-gy-5 product-style-2 ratio_asos product-list-section">
+         <div className={productsWrapperClasses}>
             {isLoading
                ? skeletons
                : products.map((product) => (
