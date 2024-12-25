@@ -13,6 +13,10 @@ const ShopOutputOption = () => {
       setActiveValue(valuePerRow);
    };
 
+   const productsPerRowValue = useSelector(
+      (state) => state.shopFilters.productsPerPage
+   );
+
    const gridOptions = [
       { value: 2, img: "grid-2.svg", className: "two-grid" },
       {
@@ -32,6 +36,8 @@ const ShopOutputOption = () => {
       dispatch(setProductsPerPage(event.target.value));
    };
 
+   const posibleGrigSizes = [12, 24, 52, 100];
+
    return (
       <div className="col-12">
          <div className="filter-options">
@@ -46,8 +52,8 @@ const ShopOutputOption = () => {
                         <option value={-1} selected>
                            Default
                         </option>
-                        <option value={1}>Date, New To Old</option>
-                        <option value={2}>Date, Old To New</option>
+                        {/* <option value={1}>Date, New To Old</option>
+                        <option value={2}>Date, Old To New</option> */}
                         <option value={3}>Price, Low To High</option>
                         <option value={4}>Price, High To Low</option>
                      </select>
@@ -59,38 +65,38 @@ const ShopOutputOption = () => {
                      name="size"
                      id="pagesize"
                      onChange={(event) => changeProductsPerPageHeandler(event)}
+                     value={productsPerRowValue}
                   >
-                     <option value={12} selected>
-                        12 Products Per Page
-                     </option>
-                     <option value={24}>24 Products Per Page</option>
-                     <option value={52}>52 Products Per Page</option>
-                     <option value={100}>100 Products Per Page</option>
+                     {posibleGrigSizes.map((size) => (
+                        <option key={size} value={size}>
+                           {size} Products Per Page
+                        </option>
+                     ))}
                   </select>
                </div>
-            </div>
-            <div className="grid-options d-sm-inline-block d-none">
-               <ul className="d-flex">
-                  {gridOptions.map((option) => (
-                     <li
-                        key={option.value}
-                        className={`${option.className} ${
-                           activeValue === option.value ? "active" : ""
-                        }`}
-                     >
-                        <a
-                           href="javascript:void(0)"
-                           onClick={() => setPerRowValue(option.value)}
+               <div className="grid-options d-sm-inline-block d-none">
+                  <ul className="d-flex">
+                     {gridOptions.map((option) => (
+                        <li
+                           key={option.value}
+                           className={`${option.className} ${
+                              activeValue === option.value ? "active" : ""
+                           }`}
                         >
-                           <img
-                              src={`assets/svg/${option.img}`}
-                              className="img-fluid blur-up lazyload"
-                              alt={`Grid ${option.value}`}
-                           />
-                        </a>
-                     </li>
-                  ))}
-               </ul>
+                           <a
+                              href="javascript:void(0)"
+                              onClick={() => setPerRowValue(option.value)}
+                           >
+                              <img
+                                 src={`assets/svg/${option.img}`}
+                                 className="img-fluid blur-up lazyload"
+                                 alt={`Grid ${option.value}`}
+                              />
+                           </a>
+                        </li>
+                     ))}
+                  </ul>
+               </div>
             </div>
          </div>
       </div>

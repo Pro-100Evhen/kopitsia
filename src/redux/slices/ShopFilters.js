@@ -4,6 +4,7 @@ const initialState = {
    productsPerRow: 4,
    productsPerPage: 12,
    currentPage: 1,
+   shopSorting: "default", // cheaper, expensive
 };
 
 const FiltersSlice = createSlice({
@@ -27,6 +28,10 @@ const FiltersSlice = createSlice({
       setProductsPerPage(state, action) {
          state.productsPerPage = action.payload;
       },
+
+      setSortingOrder(state, action) {
+         state.shopSorting = action.payload;
+      },
    },
 });
 
@@ -35,6 +40,7 @@ export const {
    setProductsPerRow,
    resetFilters,
    setCurrentPage,
+   shopSorting,
    setProductsPerPage,
 } = FiltersSlice.actions;
 export default FiltersSlice.reducer;
