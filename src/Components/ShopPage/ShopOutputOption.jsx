@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setProductsPerRow } from "../../redux/slices/ShopFilters";
-import { setProductsPerPage } from "../../redux/slices/ShopFilters";
+import {
+   setProductsPerPage,
+   setSortingOrder,
+} from "../../redux/slices/ShopFilters";
 
 const ShopOutputOption = () => {
    const [activeValue, setActiveValue] = useState(4);
@@ -36,10 +39,20 @@ const ShopOutputOption = () => {
       dispatch(setProductsPerPage(event.target.value));
    };
 
+   const changeSortingType = (event) => {
+      dispatch(setSortingOrder(event.target.value));
+   };
+   const sortingType = useSelector((state) => state.shopFilters.shopSorting);
+
    const posibleGrigSizes = [12, 24, 52, 100];
+   const sortingOption = [
+      { text: "Default", value: "default" },
+      { text: "Price, Low To High", value: "cheaper" },
+      { text: "Price, High To Low", value: "expensive" },
+   ];
 
    return (
-      <div className="col-12">
+      <div className="col-12 no-margin">
          <div className="filter-options">
             <div className="select-options">
                <div className="page-view-filter">
@@ -48,14 +61,14 @@ const ShopOutputOption = () => {
                         className="form-select"
                         name="orderby"
                         id="orderby"
+                        onChange={(event) => changeSortingType(event)}
+                        value={sortingType}
                      >
-                        <option value={-1} selected>
-                           Default
-                        </option>
-                        {/* <option value={1}>Date, New To Old</option>
-                        <option value={2}>Date, Old To New</option> */}
-                        <option value={3}>Price, Low To High</option>
-                        <option value={4}>Price, High To Low</option>
+                        {sortingOption.map((option) => (
+                           <option key={option.value} value={option.value}>
+                              {option.text}
+                           </option>
+                        ))}
                      </select>
                   </div>
                </div>

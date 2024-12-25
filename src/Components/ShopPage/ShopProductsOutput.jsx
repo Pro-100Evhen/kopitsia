@@ -34,9 +34,21 @@ const ShopProductsOutput = (props) => {
       (state) => state.shopFilters
    );
 
+   const sortingType = useSelector((state) => state.shopFilters.shopSorting);
+
+   const sortingStrategies = {
+      default: (products) => [...products],
+      cheaper: (products) => [...products].sort((a, b) => a.price - b.price),
+      expensive: (products) => [...products].sort((a, b) => b.price - a.price),
+   };
+
+   const sortedProducts = sortingStrategies[sortingType]
+      ? sortingStrategies[sortingType](products)
+      : [...products];
+
    const indexOfLastProduct = currentPage * productsPerPage;
    const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-   const currentProductsToOutPut = products.slice(
+   const currentProductsToOutPut = sortedProducts.slice(
       indexOfFirstProduct,
       indexOfLastProduct
    );

@@ -41,6 +41,7 @@ export const {
    resetFilters,
    setCurrentPage,
    shopSorting,
+   setSortingOrder,
    setProductsPerPage,
 } = FiltersSlice.actions;
 export default FiltersSlice.reducer;

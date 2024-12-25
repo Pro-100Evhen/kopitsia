@@ -450,3 +450,12 @@ footer .main-footer {
 .page-section .pagination .page-item.active .page-link:hover {
    color: #fff;
 }
+.grid-options.d-sm-inline-block .d-flex {
+   margin: 0;
+}
+.col-12.no-margin {
+   margin: 0;
+}
+.col-12.no-margin .filter-options {
+   justify-content: end;
+}
