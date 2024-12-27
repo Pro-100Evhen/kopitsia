@@ -60,6 +60,22 @@ const ShopProductsOutput = (props) => {
       dispatch(setCurrentPage(page));
    };
 
+   const { categories, sizes } = useSelector((state) => ({
+      categories: state.shopFilters.filters.categories,
+      sizes: state.shopFilters.filters.sizes,
+   }));
+
+   const currentProductsToOutPutFiltered = products.filter((product) => {
+      const matchesCategory =
+         categories.length === 0 || categories.includes(product.categories);
+
+      const matchesSize =
+         sizes.length === 0 ||
+         sizes.some((size) => product.sizes.includes(size));
+
+      return matchesCategory && matchesSize;
+   });
+
    return (
       <div className="category-product col-lg-9 col-12 ratio_30">
          <div className="row g-4">
@@ -75,7 +91,7 @@ const ShopProductsOutput = (props) => {
          <div className={productsWrapperClasses}>
             {isLoading
                ? skeletons
-               : currentProductsToOutPut.map((product) => (
+               : currentProductsToOutPutFiltered.map((product) => (
                     <ProductsPrev
                        key={product.id}
                        name={product.name}
