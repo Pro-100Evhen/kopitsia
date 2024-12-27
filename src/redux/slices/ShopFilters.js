@@ -58,6 +58,10 @@ const FiltersSlice = createSlice({
             ...state.filters.sizes.filter((size) => size !== action.payload),
          ];
       },
+      clearAllFielters(state) {
+         state.filters.categories = [];
+         state.filters.sizes = [];
+      },
    },
 });
 
@@ -72,5 +76,6 @@ export const {
    remoweCategorie,
    addSize,
    remoweSize,
+   clearAllFielters,
 } = FiltersSlice.actions;
 export default FiltersSlice.reducer;

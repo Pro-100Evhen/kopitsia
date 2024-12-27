@@ -46,26 +46,13 @@ const ShopProductsOutput = (props) => {
       ? sortingStrategies[sortingType](products)
       : [...products];
 
-   const indexOfLastProduct = currentPage * productsPerPage;
-   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-   const currentProductsToOutPut = sortedProducts.slice(
-      indexOfFirstProduct,
-      indexOfLastProduct
-   );
-
-   const totalPages = Math.ceil(products.length / productsPerPage);
-   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
-
-   const chagePage = (page) => {
-      dispatch(setCurrentPage(page));
-   };
-
    const { categories, sizes } = useSelector((state) => ({
       categories: state.shopFilters.filters.categories,
       sizes: state.shopFilters.filters.sizes,
    }));
 
-   const currentProductsToOutPutFiltered = products.filter((product) => {
+   // Фільтрація продуктів до пагінації
+   const currentProductsToOutPutFiltered = sortedProducts.filter((product) => {
       const matchesCategory =
          categories.length === 0 || categories.includes(product.categories);
 
@@ -75,6 +62,23 @@ const ShopProductsOutput = (props) => {
 
       return matchesCategory && matchesSize;
    });
+
+   // Розрахунок сторінок після фільтрації
+   const indexOfLastProduct = currentPage * productsPerPage;
+   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+   const currentProductsToOutPut = currentProductsToOutPutFiltered.slice(
+      indexOfFirstProduct,
+      indexOfLastProduct
+   );
+
+   const totalPages = Math.ceil(
+      currentProductsToOutPutFiltered.length / productsPerPage
+   );
+   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
+
+   const chagePage = (page) => {
+      dispatch(setCurrentPage(page));
+   };
 
    return (
       <div className="category-product col-lg-9 col-12 ratio_30">
@@ -91,7 +95,7 @@ const ShopProductsOutput = (props) => {
          <div className={productsWrapperClasses}>
             {isLoading
                ? skeletons
-               : currentProductsToOutPutFiltered.map((product) => (
+               : currentProductsToOutPut.map((product) => (
                     <ProductsPrev
                        key={product.id}
                        name={product.name}

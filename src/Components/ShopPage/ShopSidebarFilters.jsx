@@ -4,6 +4,7 @@ import { selectorProducts } from "../../redux/slices/ProductSlice";
 import {
    addCategorie,
    addSize,
+   clearAllFielters,
    remoweCategorie,
    remoweSize,
 } from "../../redux/slices/ShopFilters";
@@ -48,6 +49,15 @@ const ShopSidebarFilters = () => {
          : dispatch(remoweSize(event.target.value));
    };
 
+   const { categories, sizes } = useSelector((state) => ({
+      categories: state.shopFilters.filters.categories,
+      sizes: state.shopFilters.filters.sizes,
+   }));
+
+   const clearAllFieltersHeandler = () => {
+      dispatch(clearAllFielters());
+   };
+
    return (
       <div className="col-lg-3 category-side col-md-4">
          <div className="category-option">
@@ -83,6 +93,9 @@ const ShopSidebarFilters = () => {
                                        id={`category-${index}`}
                                        name="brands"
                                        defaultValue={1}
+                                       checked={categories.includes(
+                                          category.name
+                                       )}
                                        type="checkbox"
                                        value={category.name}
                                        onChange={(event) =>
@@ -133,6 +146,7 @@ const ShopSidebarFilters = () => {
                                        defaultValue={1}
                                        type="checkbox"
                                        value={size.name}
+                                       checked={sizes.includes(size.name)}
                                        onChange={(event) =>
                                           addFilterSizes(event)
                                        }
@@ -150,6 +164,19 @@ const ShopSidebarFilters = () => {
                         </ul>
                      </div>
                   </div>
+               </div>
+               <div className="accordion-item category-rating">
+                  <h2 className="accordion-header" id="headingTwo">
+                     <button
+                        className="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        onClick={() => clearAllFieltersHeandler()}
+                     >
+                        Очистити всі фільтри
+                     </button>
+                  </h2>
                </div>
             </div>
          </div>
