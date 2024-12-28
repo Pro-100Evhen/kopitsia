@@ -168,7 +168,7 @@ const ShopSidebarFilters = () => {
                <div className="accordion-item category-rating">
                   <h2 className="accordion-header" id="headingTwo">
                      <button
-                        className="accordion-button"
+                        className="clear-all-filters-button"
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#collapseTwo"
