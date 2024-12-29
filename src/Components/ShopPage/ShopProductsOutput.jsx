@@ -76,7 +76,8 @@ const ShopProductsOutput = (props) => {
    );
    const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
 
-   const chagePage = (page) => {
+   const chagePage = (event, page) => {
+      event.preventDefault();
       dispatch(setCurrentPage(page));
    };
 
@@ -114,9 +115,9 @@ const ShopProductsOutput = (props) => {
                >
                   <a
                      className="page-link"
-                     href="javascript:void(0)"
+                     href=""
                      aria-label="Previous"
-                     onClick={() => chagePage(currentPage - 1)}
+                     onClick={(event) => chagePage(event, currentPage - 1)}
                   >
                      <span aria-hidden="true">
                         <i className="fas fa-chevron-left" />
@@ -133,8 +134,8 @@ const ShopProductsOutput = (props) => {
                   >
                      <a
                         className="page-link"
-                        href="javascript:void(0)"
-                        onClick={() => chagePage(page)}
+                        href=""
+                        onClick={(event) => chagePage(event, page)}
                      >
                         {page}
                      </a>
@@ -147,10 +148,10 @@ const ShopProductsOutput = (props) => {
                   }`}
                >
                   <a
-                     href="javascript:void(0)"
+                     href=""
                      className="page-link"
                      aria-label="Next"
-                     onClick={() => chagePage(currentPage + 1)}
+                     onClick={(event) => chagePage(event, currentPage + 1)}
                   >
                      <span aria-hidden="true">
                         <i className="fas fa-chevron-right" />

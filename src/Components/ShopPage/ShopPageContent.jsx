@@ -3,9 +3,9 @@ import ShopSidebarFilters from "./ShopSidebarFilters";
 import ShopProductsOutput from "./ShopProductsOutput";
 const ShopPageContent = (props) => {
    return (
-      <section class="section-b-space">
-         <div class="container">
-            <div class="row">
+      <section className="section-b-space">
+         <div className="container">
+            <div className="row">
                <ShopSidebarFilters />
 
                <ShopProductsOutput props={props} />

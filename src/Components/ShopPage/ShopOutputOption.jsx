@@ -12,7 +12,6 @@ const ShopOutputOption = () => {
 
    const setPerRowValue = (valuePerRow, event) => {
       dispatch(setProductsPerRow(valuePerRow));
-
       setActiveValue(valuePerRow);
    };
 
@@ -97,7 +96,7 @@ const ShopOutputOption = () => {
                            }`}
                         >
                            <a
-                              href="javascript:void(0)"
+                              href="#"
                               onClick={() => setPerRowValue(option.value)}
                            >
                               <img

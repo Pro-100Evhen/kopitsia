@@ -92,7 +92,6 @@ const ShopSidebarFilters = () => {
                                        className="checkbox_animated check-it"
                                        id={`category-${index}`}
                                        name="brands"
-                                       defaultValue={1}
                                        checked={categories.includes(
                                           category.name
                                        )}
@@ -143,7 +142,6 @@ const ShopSidebarFilters = () => {
                                        className="checkbox_animated check-it"
                                        id={`size-${index}`}
                                        name="brands"
-                                       defaultValue={1}
                                        type="checkbox"
                                        value={size.name}
                                        checked={sizes.includes(size.name)}
