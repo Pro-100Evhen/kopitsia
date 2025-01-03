@@ -55,7 +55,7 @@ const ProductsPrev = ({ imageUrl, categories, name, price, id }) => {
    };
 
    return (
-      <div className="  col-6">
+      <div className="  col-3">
          <div className="product-box">
             <div className="img-wrapper">
                <div>

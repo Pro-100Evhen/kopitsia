@@ -43,6 +43,7 @@ const ProductsCollection = (props) => {
                           categories={product.categories}
                           imageUrl={product.imageUrl}
                           id={product.id}
+
                           // В наступних спрінтах додати вниз товару обмежений опис
                        />
                     ))}

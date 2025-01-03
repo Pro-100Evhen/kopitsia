@@ -17,7 +17,11 @@ function Home() {
          {/* Банери категорій продуктів, створяться після підключення redux */}
          {/* <Baners /> */}
 
-         <ProductsCollection title="М'які іграшки" subTitle="Саме для вас" />
+         <ProductsCollection
+            productsPerRowShow="4"
+            title="М'які іграшки"
+            subTitle="Саме для вас"
+         />
 
          {/* Слайдер категорій продуктів, поки не роблю нема куди виводити, 
          піде в 2/3 спрінт */}

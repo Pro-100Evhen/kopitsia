@@ -13,10 +13,7 @@ const Footer = () => {
             <div className="container">
                <div className="row gy-4">
                   <div className="footer-info__conteiner">
-                     <h3>
-                        Розроблено в якості пет-проєкту студентом НФК НУБіП
-                        України, групи кн-201, Назаренком Є.В.
-                     </h3>
+                     <h3>Розроблено в якості пет-проєкту</h3>
 
                      <h5 className="footer-info__contacts-title">
                         Доступні контакти:
