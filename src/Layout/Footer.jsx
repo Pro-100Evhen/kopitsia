@@ -1,8 +1,3 @@
-import React from "react";
-import { SiTelegram } from "react-icons/si";
-import { IoMdMailUnread } from "react-icons/io";
-import { FaGithub, FaPhone } from "react-icons/fa6";
-import { FaLinkedin, FaFreeCodeCamp } from "react-icons/fa";
 import Message from "../Components/Messages/Message";
 
 const Footer = () => {

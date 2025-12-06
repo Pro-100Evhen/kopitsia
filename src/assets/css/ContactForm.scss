@@ -1,0 +1,468 @@
+// ContactForm SCSS
+// Використовуємо CSS змінні для кольорів сайту
+
+$primary-color: var(--theme-color, #0163d2);
+$error-color: #dc3545;
+$success-color: #28a745;
+$border-color: #e0e0e0;
+$text-color: #232323;
+$text-light: #7e7e7e;
+$bg-light: #f8f9fa;
+$spacing-unit: 1rem;
+$transition: all 0.3s ease;
+
+// Медіа запити
+$mobile: 576px;
+$tablet: 768px;
+$desktop: 992px;
+$large: 1200px;
+
+.contact-form-container {
+   width: 100%;
+   background: #ffffff;
+   padding: $spacing-unit * 2 0;
+
+   @media (max-width: $tablet) {
+      padding: $spacing-unit * 1.5 0;
+   }
+
+   @media (max-width: $mobile) {
+      padding: $spacing-unit 0;
+   }
+}
+
+.contact-form-wrapper {
+   width: 100%;
+   max-width: 100%;
+   background: #ffffff;
+   border-radius: 0;
+   box-shadow: none;
+   padding: $spacing-unit * 2 0;
+   animation: slideIn 0.5s ease-out;
+   margin: 0 auto;
+
+   @media (max-width: $tablet) {
+      padding: $spacing-unit * 1.5 0;
+   }
+
+   @media (max-width: $mobile) {
+      padding: $spacing-unit 0;
+   }
+}
+
+@keyframes slideIn {
+   from {
+      opacity: 0;
+      transform: translateY(20px);
+   }
+
+   to {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+.form-title {
+   font-size: 28px;
+   font-weight: 700;
+   color: $text-color;
+   margin: 0 0 $spacing-unit * 0.5 0;
+   text-align: center;
+
+   @media (max-width: $tablet) {
+      font-size: 24px;
+   }
+
+   @media (max-width: $mobile) {
+      font-size: 20px;
+   }
+}
+
+.form-subtitle {
+   font-size: 14px;
+   color: $text-light;
+   text-align: center;
+   margin: 0 0 $spacing-unit * 2 0;
+   line-height: 1.5;
+
+   @media (max-width: $mobile) {
+      font-size: 12px;
+      margin-bottom: $spacing-unit * 1.5;
+   }
+}
+
+.contact-form {
+   display: flex;
+   flex-direction: column;
+   gap: $spacing-unit * 1.5;
+}
+
+.form-group {
+   display: flex;
+   flex-direction: column;
+   gap: 6px;
+}
+
+.form-label {
+   font-size: 14px;
+   font-weight: 600;
+   color: $text-color;
+   display: flex;
+   align-items: center;
+   gap: 4px;
+
+   .required {
+      color: $error-color;
+      font-size: 16px;
+   }
+
+   @media (max-width: $mobile) {
+      font-size: 13px;
+   }
+}
+
+.form-input,
+.form-textarea {
+   width: 100%;
+   padding: $spacing-unit * 0.75;
+   font-size: 14px;
+   border: 1px solid $border-color;
+   border-radius: 4px;
+   font-family: inherit;
+   transition: $transition;
+   background: white;
+   color: $text-color;
+
+   &::placeholder {
+      color: #999;
+   }
+
+   &:focus {
+      outline: none;
+      border-color: $primary-color;
+      box-shadow: 0 0 0 2px rgba(1, 99, 210, 0.1);
+   }
+
+   &.error {
+      border-color: $error-color;
+      background-color: rgba(220, 53, 69, 0.02);
+
+      &:focus {
+         box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.1);
+      }
+   }
+
+   @media (max-width: $mobile) {
+      padding: $spacing-unit * 0.6;
+      font-size: 13px;
+      border-radius: 4px;
+   }
+}
+
+.form-textarea {
+   resize: vertical;
+   min-height: 120px;
+   max-height: 300px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+   @media (max-width: $mobile) {
+      min-height: 100px;
+   }
+}
+
+.error-message {
+   font-size: 12px;
+   color: $error-color;
+   display: flex;
+   align-items: center;
+   gap: 4px;
+   animation: shake 0.3s ease-in-out;
+
+   @media (max-width: $mobile) {
+      font-size: 11px;
+   }
+}
+
+@keyframes shake {
+
+   0%,
+   100% {
+      transform: translateX(0);
+   }
+
+   25% {
+      transform: translateX(-5px);
+   }
+
+   75% {
+      transform: translateX(5px);
+   }
+}
+
+.char-count {
+   font-size: 12px;
+   color: $text-light;
+   text-align: right;
+   margin-top: -2px;
+}
+
+// Файл завантаження
+.file-upload-wrapper {
+   position: relative;
+}
+
+.file-input {
+   display: none;
+}
+
+.file-upload-label {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: $spacing-unit;
+   padding: $spacing-unit * 1.5;
+   border: 2px dashed $primary-color;
+   border-radius: 4px;
+   background: rgba(1, 99, 210, 0.02);
+   cursor: pointer;
+   transition: $transition;
+
+   &:hover {
+      background: rgba(1, 99, 210, 0.05);
+      border-color: $primary-color;
+   }
+
+   &:active {
+      background: rgba(1, 99, 210, 0.1);
+   }
+
+   @media (max-width: $tablet) {
+      padding: $spacing-unit;
+      flex-direction: column;
+      text-align: center;
+   }
+}
+
+.upload-icon {
+   font-size: 32px;
+   flex-shrink: 0;
+
+   @media (max-width: $tablet) {
+      font-size: 28px;
+   }
+}
+
+.upload-text {
+   display: flex;
+   flex-direction: column;
+   gap: 4px;
+   text-align: left;
+
+   @media (max-width: $tablet) {
+      text-align: center;
+   }
+}
+
+.upload-title {
+   font-size: 14px;
+   font-weight: 600;
+   color: $text-color;
+   margin: 0;
+
+   @media (max-width: $mobile) {
+      font-size: 13px;
+   }
+}
+
+.upload-subtitle {
+   font-size: 12px;
+   color: $text-light;
+   margin: 0;
+
+   @media (max-width: $mobile) {
+      font-size: 11px;
+   }
+}
+
+.image-preview-wrapper {
+   margin-top: $spacing-unit;
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+   align-items: center;
+}
+
+.image-preview {
+   position: relative;
+   width: 100%;
+   max-width: 200px;
+   height: 200px;
+   border-radius: 4px;
+   overflow: hidden;
+   border: 1px solid $border-color;
+   background: $bg-light;
+
+   img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+
+   @media (max-width: $tablet) {
+      max-width: 150px;
+      height: 150px;
+   }
+}
+
+.remove-image-btn {
+   position: absolute;
+   top: 8px;
+   right: 8px;
+   width: 32px;
+   height: 32px;
+   border-radius: 50%;
+   background: rgba(220, 53, 69, 0.9);
+   color: white;
+   border: none;
+   cursor: pointer;
+   font-size: 18px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: $transition;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+   &:hover {
+      background: rgba(220, 53, 69, 1);
+      transform: scale(1.1);
+   }
+
+   &:active {
+      transform: scale(0.95);
+   }
+}
+
+.preview-filename {
+   font-size: 12px;
+   color: $text-light;
+   margin: 0;
+   text-align: center;
+   word-break: break-word;
+   max-width: 200px;
+}
+
+// Кнопка
+.submit-button {
+   width: 100%;
+   padding: $spacing-unit * 0.875;
+   font-size: 16px;
+   font-weight: 600;
+   color: white;
+   background: $primary-color;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   transition: $transition;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 8px;
+   margin-top: $spacing-unit * 0.5;
+   box-shadow: none;
+
+   &:hover:not(:disabled) {
+      opacity: 0.9;
+      transform: none;
+   }
+
+   &:active:not(:disabled) {
+      transform: none;
+   }
+
+   &:disabled,
+   &.loading {
+      opacity: 0.7;
+      cursor: not-allowed;
+   }
+
+   @media (max-width: $mobile) {
+      font-size: 14px;
+      padding: $spacing-unit * 0.75;
+   }
+}
+
+.spinner {
+   display: inline-block;
+   width: 16px;
+   height: 16px;
+   border: 2px solid rgba(255, 255, 255, 0.3);
+   border-top-color: white;
+   border-radius: 50%;
+   animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+   to {
+      transform: rotate(360deg);
+   }
+}
+
+.form-note {
+   font-size: 12px;
+   color: $text-light;
+   text-align: center;
+   margin: $spacing-unit 0 0 0;
+   line-height: 1.5;
+
+   @media (max-width: $mobile) {
+      font-size: 11px;
+   }
+}
+
+// Dark mode підтримка (опціонально)
+@media (prefers-color-scheme: dark) {
+   .contact-form-wrapper {
+      background: #ffffff;
+   }
+
+   .form-title,
+   .form-label {
+      color: $text-color;
+   }
+
+   .form-subtitle,
+   .char-count,
+   .upload-subtitle {
+      color: $text-light;
+   }
+
+   .form-input,
+   .form-textarea {
+      background: white;
+      color: $text-color;
+      border-color: $border-color;
+
+      &::placeholder {
+         color: #999;
+      }
+
+      &:focus {
+         border-color: $primary-color;
+         box-shadow: 0 0 0 2px rgba(1, 99, 210, 0.1);
+      }
+   }
+
+   .file-upload-label {
+      background: rgba(1, 99, 210, 0.02);
+      border-color: $primary-color;
+
+      &:hover {
+         background: rgba(1, 99, 210, 0.05);
+      }
+   }
+
+   .image-preview {
+      background: $bg-light;
+      border-color: $border-color;
+   }
+}
